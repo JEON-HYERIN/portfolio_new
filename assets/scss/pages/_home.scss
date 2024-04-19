@@ -107,6 +107,9 @@
 
 // work
 .section-work {
+  @media screen and (min-width: 700px) {
+    padding-bottom: 8.75rem;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
