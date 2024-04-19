@@ -59,7 +59,8 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
+  min-height: 10000px;
   background-color: $color-black;
   overflow-y: overlay;
 }
@@ -75,4 +76,9 @@ body {
 
 ::-webkit-scrollbar-track {
   background-color: #1c1c1c;
+}
+
+video {
+  display: block;
+  max-width: 100%;
 }

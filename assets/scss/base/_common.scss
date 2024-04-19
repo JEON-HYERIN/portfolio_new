@@ -6,3 +6,23 @@
     padding-right: 2.5rem;
   }
 }
+
+.common-headline {
+  margin-top: 2.5rem;
+  padding-top: .9375rem;
+  border-top: 1px solid rgba(255, 255, 255, .4);
+  @media screen and (min-width: 700px) {
+    margin-bottom: 3.75rem;
+  }
+  span {
+    font-size: .75rem;
+    font-weight: 500;
+    font-variation-settings: "wght" 500;
+    &::before {
+      content: "\2b24";
+      display: inline-block;
+      margin-right: .625rem;
+      vertical-align: 3px;
+    }
+  }
+}

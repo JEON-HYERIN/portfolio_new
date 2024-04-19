@@ -104,3 +104,106 @@
     }
   }
 }
+
+// work
+.section-work {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.25rem;
+    @media screen and (min-width: 700px) {
+      grid-row-gap: 8.5rem;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: .625rem;
+    @media screen and (min-width: 700px) {
+      row-gap: 1.25rem;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1.5rem;
+  }
+  &__textbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2rem;
+  }
+  &__title {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.2;
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    .section-work__item:hover & {
+      opacity: .75;
+    }
+  }
+  &__hashtag {
+    display: flex;
+    column-gap: .4rem;
+    font-size: 1rem;
+    opacity: .4;
+  }
+  &__links {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+  }
+  &__link {
+    position: relative;
+    padding-bottom: .625rem;
+    border-bottom: 1px solid #fff6;
+    font-size: .8rem;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #fff;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform .6s cubic-bezier(.075,.82,.165,1);
+    }
+    &:hover::before {
+      transform: scale(1);
+      transform-origin: left center;
+    }
+  }
+  &__thumbnail {
+    border-radius: .375rem;
+    overflow: hidden;
+    background-color: #000;
+    transform: translateZ(0);
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    .section-work__item:hover & {
+      opacity: .75;
+    }
+    a {
+      position: relative;
+      display: block;
+      $padding: 60%, 67%, 73%, 75%, 62%, 75%;
+      @for $i from 1 through 6 {
+        .section-work__item:nth-child(#{$i}) & {
+          padding-top: nth($padding, $i);
+        }
+      }
+    }
+    video,
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
