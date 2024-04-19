@@ -66,7 +66,7 @@
     margin-left: 1.25rem;
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: .3125rem;
-    .section-visual__slogan:hover & {
+    &:hover {
       border-color: #fff9;
       background-color: #1c1c1c33;
     }
@@ -92,7 +92,7 @@
   &__arrow {
     font-size: 150%;
     transition: transform .6s cubic-bezier(.075,.82,.165,1);
-    .section-visual__slogan:hover & {
+    .section-visual__link:hover & {
       transform: translate(.3125rem);
     }
   }
@@ -107,8 +107,10 @@
 
 // work
 .section-work {
-  @media screen and (min-width: 700px) {
-    padding-bottom: 8.75rem;
+  &__row {
+    @media screen and (min-width: 700px) {
+      padding-bottom: 8.75rem;
+    }
   }
   &__list {
     display: grid;
@@ -142,10 +144,6 @@
     font-size: 1.375rem;
     font-weight: 400;
     line-height: 1.2;
-    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
-    .section-work__item:hover & {
-      opacity: .75;
-    }
   }
   &__hashtag {
     display: flex;
@@ -185,18 +183,18 @@
     overflow: hidden;
     background-color: #000;
     transform: translateZ(0);
-    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
-    .section-work__item:hover & {
-      opacity: .75;
-    }
     a {
       position: relative;
       display: block;
+      transition: opacity .6s cubic-bezier(.075,.82,.165,1);
       $padding: 60%, 67%, 73%, 75%, 62%, 75%;
       @for $i from 1 through 6 {
         .section-work__item:nth-child(#{$i}) & {
           padding-top: nth($padding, $i);
         }
+      }
+      &:hover {
+        opacity: .75;
       }
     }
     video,
@@ -207,6 +205,122 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+  &__card {
+    @at-root .card {
+      &__list {
+        display: grid;
+        column-gap: 1.25rem;
+        @media screen and (min-width: 700px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (min-width: 1280px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      &__item {
+        position: relative;
+        border: 1px solid #767676;
+        border-radius: .375rem;
+        overflow: hidden;
+        @media screen and (min-width: 700px) {
+          height: 26.25rem;
+        }
+      }
+      &__link {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        padding: 1.5625rem;
+        &:hover {
+          color: $color-black;
+          background-color: #fff;
+        }
+      }
+      &__title {
+        font-weight: 500;
+        line-height: 1;
+        &--short {
+          font-size: 3rem;
+          .card__link:hover & {
+            display: none;
+          }
+        }
+        &--long {
+          display: none;
+          font-size: 2.5625rem;
+          .card__link:hover & {
+            display: block;
+          }
+        }
+      }
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        line-height: 1.1;
+      }
+      &__description {
+        font-size: 1rem;
+      }
+      &__arrow {
+        font-size: 1.375rem;
+        transition: transform .6s cubic-bezier(.075,.82,.165,1);
+        .card__link:hover & {
+          transform: translate(.3125rem);
+        }
+      }
+      &__ribbon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5.3125rem;
+        height: 5.3125rem;
+        font-size: .75rem;
+        font-weight: 500;
+        color: #1c1c1c;
+        transform: rotate(45deg);
+        span {
+          position: absolute;
+          top: 1.25rem;
+          left: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 1.5625rem;
+          width: 18.75rem;
+          margin-left: -9.375rem;
+          background-color: #fff;
+        }
+        .card__link:hover & {
+          display: none;
+        }
+      }
+      &__eye {
+        position: absolute;
+        top: .625rem;
+        right: .625rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 50%;
+        background-color: #0000001a;
+        transform: scale(0);
+        visibility: hidden;
+        transition: transform .6s cubic-bezier(.075,.82,.165,1);
+        svg {
+          width: 50%;
+          height: 50%;
+        }
+        .card__link:hover & {
+          visibility: visible;
+          transform: scale(1);
+        }
+      }
     }
   }
 }

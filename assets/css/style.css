@@ -419,7 +419,7 @@ video {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 0.3125rem;
 }
-.section-visual__slogan:hover .section-visual__link {
+.section-visual__link:hover {
   border-color: rgba(255, 255, 255, 0.6);
   background-color: rgba(28, 28, 28, 0.2);
 }
@@ -448,7 +448,7 @@ video {
   font-size: 150%;
   transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.section-visual__slogan:hover .section-visual__arrow {
+.section-visual__link:hover .section-visual__arrow {
   transform: translate(0.3125rem);
 }
 .section-visual__scroll {
@@ -460,7 +460,7 @@ video {
 }
 
 @media screen and (min-width: 700px) {
-  .section-work {
+  .section-work__row {
     padding-bottom: 8.75rem;
   }
 }
@@ -501,10 +501,6 @@ video {
   font-size: 1.375rem;
   font-weight: 400;
   line-height: 1.2;
-  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.section-work__item:hover .section-work__title {
-  opacity: 0.75;
 }
 .section-work__hashtag {
   display: flex;
@@ -546,14 +542,11 @@ video {
   overflow: hidden;
   background-color: #000;
   transform: translateZ(0);
-  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.section-work__item:hover .section-work__thumbnail {
-  opacity: 0.75;
 }
 .section-work__thumbnail a {
   position: relative;
   display: block;
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .section-work__item:nth-child(1) .section-work__thumbnail a {
   padding-top: 60%;
@@ -573,6 +566,9 @@ video {
 .section-work__item:nth-child(6) .section-work__thumbnail a {
   padding-top: 75%;
 }
+.section-work__thumbnail a:hover {
+  opacity: 0.75;
+}
 .section-work__thumbnail video,
 .section-work__thumbnail img {
   position: absolute;
@@ -582,4 +578,123 @@ video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.card__list {
+  display: grid;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+@media screen and (min-width: 700px) {
+  .card__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.card__item {
+  position: relative;
+  border: 1px solid #767676;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 700px) {
+  .card__item {
+    height: 26.25rem;
+  }
+}
+.card__link {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5625rem;
+}
+.card__link:hover {
+  color: #1c1c1c;
+  background-color: #fff;
+}
+.card__title {
+  font-weight: 500;
+  line-height: 1;
+}
+.card__title--short {
+  font-size: 3rem;
+}
+.card__link:hover .card__title--short {
+  display: none;
+}
+.card__title--long {
+  display: none;
+  font-size: 2.5625rem;
+}
+.card__link:hover .card__title--long {
+  display: block;
+}
+.card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 1.1;
+}
+.card__description {
+  font-size: 1rem;
+}
+.card__arrow {
+  font-size: 1.375rem;
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__link:hover .card__arrow {
+  transform: translate(0.3125rem);
+}
+.card__ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5.3125rem;
+  height: 5.3125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  transform: rotate(45deg);
+}
+.card__ribbon span {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5625rem;
+  width: 18.75rem;
+  margin-left: -9.375rem;
+  background-color: #fff;
+}
+.card__link:hover .card__ribbon {
+  display: none;
+}
+.card__eye {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  transform: scale(0);
+  visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card__eye svg {
+  width: 50%;
+  height: 50%;
+}
+.card__link:hover .card__eye {
+  visibility: visible;
+  transform: scale(1);
 }
