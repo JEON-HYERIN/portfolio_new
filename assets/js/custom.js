@@ -8,8 +8,10 @@ gsap.ticker.add((time)=>{
 gsap.ticker.lagSmoothing(0);
 
 // a태그 기본동작 방지
-// $(function () {
-//   $(document).on('click', 'a[href="#"]', function (e) {
-//     e.preventDefault();
-//   });
-// })
+$(function () {
+  $(document).on('click', 'a[href="#"]', function (e) {
+    e.preventDefault();
+  });
+})
+
+
