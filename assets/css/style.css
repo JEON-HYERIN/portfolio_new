@@ -70,6 +70,16 @@ input, select, button {
   background: transparent;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
 #wrap {
   min-width: 320px;
 }
@@ -81,4 +91,258 @@ input, select, button {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+}
+
+::-moz-selection {
+  background-color: #fff;
+  color: #1c1c1c;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #fff;
+  color: #1c1c1c;
+  text-shadow: none;
+}
+
+html {
+  font-family: "Neue Montreal", sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+@media (max-width: 699px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 700px) and (max-width: 999px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1599px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1999px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 2000px) and (max-width: 2399px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media (min-width: 2400px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 3px solid #1c1c1c;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("//pangrampangram.com/cdn/shop/files/PPNeueMontreal-Variable.ttf?v=3406151675705070910") format("truetype");
+  font-weight: 1 999;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("//pangrampangram.com/cdn/shop/files/PPNeueMontreal-Italic.woff2?v=829860060225883942") format("woff");
+  font-weight: 1 999;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "brut";
+  src: url("//pangrampangram.com/cdn/shop/files/OTBrut-Italic.woff?v=9894570620152696126") format("truetype");
+}
+@font-face {
+  font-family: "playground";
+  src: url("//pangrampangram.com/cdn/shop/files/PPPlayground-Medium.woff2?v=17425418334934416119") format("truetype");
+}
+.common-inner {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  .common-inner {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+}
+@media screen and (min-width: 1000px) {
+  .header {
+    padding: 1.875rem 0;
+  }
+}
+.header .common-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 1rem;
+  pointer-events: auto;
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  fill: currentColor;
+  width: 12.375rem;
+  height: 1rem;
+}
+.global-nav__list {
+  display: flex;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+.section-visual {
+  height: 100vh;
+  overflow: hidden;
+  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
+}
+.section-visual .common-inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.section-visual__content {
+  flex: 1;
+}
+.section-visual__headline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: -1.25rem;
+  font-family: playground, "Neue Montreal";
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
+  line-height: 1.4;
+}
+@media screen and (min-width: 1000px) {
+  .section-visual__headline {
+    font-size: 12.5rem;
+  }
+}
+.section-visual__headline span {
+  box-sizing: border-box;
+  padding-left: 1.25rem;
+}
+@media screen and (min-width: 700px) {
+  .section-visual__headline span:nth-child(1) {
+    width: 66.6666666667%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .section-visual__headline span:nth-child(2) {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .section-visual__headline span:nth-child(3) {
+    width: 50%;
+  }
+}
+.section-visual__body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 3.125rem;
+}
+@media (min-width: 700px) {
+  .section-visual__body {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+.section-visual__link {
+  display: flex;
+  row-gap: 0.625rem;
+  min-width: 12.5rem;
+  margin-left: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.3125rem;
+}
+.section-visual__slogan:hover .section-visual__link {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(28, 28, 28, 0.2);
+}
+@media screen and (min-width: 700px) {
+  .section-visual__link {
+    flex-direction: column;
+    width: 33.3333333333%;
+    padding: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.section-visual__title {
+  font-family: playground, "Neue Montreal";
+  font-size: 3rem;
+  line-height: 1;
+}
+.section-visual__textbox {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 3.125rem;
+       column-gap: 3.125rem;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+.section-visual__arrow {
+  font-size: 150%;
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.section-visual__slogan:hover .section-visual__arrow {
+  transform: translate(0.3125rem);
+}
+.section-visual__scroll {
+  font-variation-settings: "wght" 400;
+  transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.section-visual__scroll:hover {
+  opacity: 0.5;
 }

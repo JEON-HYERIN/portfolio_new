@@ -1,0 +1,8 @@
+.common-inner {
+  max-width: 130rem;
+  margin: 0 auto;
+  @media (min-width: 700px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}

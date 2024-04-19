@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+  @media screen and (min-width: 1000px) {
+    padding: 1.875rem 0;
+  }
+  .common-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 1rem;
+    pointer-events: auto;
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    fill: currentColor;
+    width: 12.375rem;
+    height: 1rem;
+    a {}
+  }
+}
+.global-nav {
+  &__list {
+    display: flex;
+    column-gap: 2.5rem;
+  }
+  &__item {}
+  &__link {}
+}

@@ -1,0 +1,106 @@
+.section-visual {
+  height: 100vh;
+  overflow: hidden;
+  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
+  .common-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    flex: 1;
+  }
+  &__headline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: -1.25rem;
+    font-family: playground, "Neue Montreal";
+    font-weight: 400;
+    font-variation-settings: "wght" 400;
+    line-height: 1.4;
+    @media screen and (min-width: 1000px) {
+        font-size: 12.5rem;
+    }
+    span {
+      box-sizing: border-box;
+      padding-left: 1.25rem;
+      &:nth-child(1) {
+        @media screen and (min-width: 700px) {
+          width: 66.6666666667%;
+        }
+      }
+      &:nth-child(2) {
+        @media screen and (min-width: 700px) {
+          width: 33.3333333333%;
+        }
+      }
+      &:nth-child(3) {
+        @media screen and (min-width: 700px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+  &__body {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 3.125rem;
+    @media (min-width: 700px) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+  &__link {
+    display: flex;
+    row-gap: .625rem;
+    min-width: 12.5rem;
+    margin-left: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: .3125rem;
+    .section-visual__slogan:hover & {
+      border-color: #fff9;
+      background-color: #1c1c1c33;
+    }
+    @media screen and (min-width: 700px) {
+      flex-direction: column;
+      width: 33.3333333333%;
+      padding: 1.25rem;
+      margin-bottom: .5rem;
+    }
+  }
+  &__title {
+    font-family: playground, "Neue Montreal";
+    font-size: 3rem;
+    line-height: 1;
+  }
+  &__textbox {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 3.125rem;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+  &__arrow {
+    font-size: 150%;
+    transition: transform .6s cubic-bezier(.075,.82,.165,1);
+    .section-visual__slogan:hover & {
+      transform: translate(.3125rem);
+    }
+  }
+  &__scroll {
+    font-variation-settings: "wght" 400;
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
