@@ -1,10 +1,21 @@
 // visual
 .section-visual {
-  height: 100vh;
-  overflow: hidden;
-  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
+  position: relative;
+  height: 150vh;
+  @include not-mobile {
+    height: 200vh;
+  }
+  &__sticky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
   .common-inner {
     position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,6 +119,14 @@
     &:hover {
       opacity: .5;
     }
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
   }
 }
 

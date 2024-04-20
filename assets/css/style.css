@@ -403,12 +403,25 @@ body {
 }
 
 .section-visual {
+  position: relative;
+  height: 150vh;
+}
+@media screen and (min-width: 700px) {
+  .section-visual {
+    height: 200vh;
+  }
+}
+.section-visual__sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
 }
 .section-visual .common-inner {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,6 +533,14 @@ body {
 }
 .section-visual__scroll:hover {
   opacity: 0.5;
+}
+.section-visual__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
 }
 
 @media screen and (min-width: 700px) {

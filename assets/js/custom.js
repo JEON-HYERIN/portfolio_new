@@ -107,3 +107,14 @@ const monthEl = document.querySelector('.footer__month');
 yearEl.textContent = year;
 monthEl.textContent = monthNames[month].substring(0, 3);
 
+
+const visualTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.section-visual',
+    start: 'center bottom',
+    end: '+=3000',
+    scrub: 0,
+    // markers: true,
+  }
+});
+visualTl.to('.section-visual__background', {opacity: 0})
