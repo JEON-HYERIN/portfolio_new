@@ -1,6 +1,8 @@
 .common-inner {
   max-width: 130rem;
   margin: 0 auto;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
   @media (min-width: 700px) {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -8,14 +10,14 @@
 }
 
 .common-headline {
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 2.1875rem;
   padding-top: .9375rem;
   border-top: 1px solid rgba(255, 255, 255, .4);
   @media screen and (min-width: 700px) {
     margin-bottom: 3.75rem;
   }
   span {
-    font-size: .75rem;
+    font-size: .8rem;
     font-weight: 500;
     font-variation-settings: "wght" 500;
     &::before {
@@ -47,5 +49,18 @@
   &:hover::before {
     transform: scale(1);
     transform-origin: left center;
+  }
+}
+
+.common-display-mo {
+  display: block;
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+}
+.common-display-pc {
+  display: none;
+  @media screen and (min-width: 1000px) {
+    display: block;
   }
 }

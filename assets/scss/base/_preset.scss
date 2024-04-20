@@ -29,9 +29,6 @@ button {
 
 html {
   scrollbar-width: none;
-  font-family: 'Neue Montreal', sans-serif;
-  line-height: 1.5;
-  color: $color-white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
@@ -59,29 +56,13 @@ html {
 }
 
 body {
-  // width: 100vw;
-  // height: 100vh;
+  font-family: 'Neue Montreal', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-white;
   background-color: $color-black;
-  // overflow-y: overlay;
 }
-// ::-webkit-scrollbar {
-//   width: 7px;
-// }
-
-// ::-webkit-scrollbar-thumb {
-//   background-color: rgba(0, 0, 0, .5);
-//   border-radius: 10px;
-//   border: 3px solid #1c1c1c;
-// }
-
-// ::-webkit-scrollbar-track {
-//   background-color: #1c1c1c;
-//   background-color: transparent;
-// }
 ::-webkit-scrollbar {
   display: none;
-}
-video {
-  display: block;
-  max-width: 100%;
 }

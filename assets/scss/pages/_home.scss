@@ -17,30 +17,30 @@
   &__headline {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     margin-left: -1.25rem;
     font-family: playground, "Neue Montreal";
+    font-size: 15vw;
     font-weight: 400;
     font-variation-settings: "wght" 400;
     line-height: 1.4;
+    @media screen and (min-width: 700px) {
+      justify-content: flex-end;
+      font-size: 12vw;
+    }
     @media screen and (min-width: 1000px) {
         font-size: 12.5rem;
     }
     span {
-      box-sizing: border-box;
       padding-left: 1.25rem;
-      &:nth-child(1) {
-        @media screen and (min-width: 700px) {
+      white-space: nowrap;
+      @media screen and (min-width: 700px) {
+        &:nth-child(1) {
           width: 66.6666666667%;
         }
-      }
-      &:nth-child(2) {
-        @media screen and (min-width: 700px) {
+        &:nth-child(2) {
           width: 33.3333333333%;
         }
-      }
-      &:nth-child(3) {
-        @media screen and (min-width: 700px) {
+        &:nth-child(3) {
           width: 50%;
         }
       }
@@ -51,20 +51,27 @@
     left: 0;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
     width: 100%;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
     padding-bottom: 3.125rem;
     @media (min-width: 700px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
       padding-left: 2.5rem;
       padding-right: 2.5rem;
     }
   }
   &__textbox {
     display: flex;
+    flex-direction: column;
     row-gap: .625rem;
     min-width: 12.5rem;
-    margin-left: 1.25rem;
+    padding: .625rem;
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: .3125rem;
     &:hover {
@@ -72,16 +79,18 @@
       background-color: #1c1c1c33;
     }
     @media screen and (min-width: 700px) {
-      flex-direction: column;
       width: 33.3333333333%;
       padding: 1.25rem;
-      margin-bottom: .5rem;
+      margin-left: 1.25rem;
     }
   }
   &__title {
     font-family: playground, "Neue Montreal";
-    font-size: 3rem;
+    font-size: 9vw;
     line-height: 1;
+    @media screen and (min-width: 700px) {
+      font-size: 3rem;
+    }
   }
   &__description {
     font-size: 1rem;
@@ -99,8 +108,6 @@
     }
   }
   &__scroll {
-    font-variation-settings: "wght" 400;
-    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
     &:hover {
       opacity: .5;
     }
@@ -145,16 +152,17 @@
     padding-top: 3rem;
   }
   &__row {
+    padding-bottom: 5rem;
     @media screen and (min-width: 700px) {
       padding-bottom: 8.75rem;
     }
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1.25rem;
+    row-gap: 3.5rem;
     @media screen and (min-width: 700px) {
-      grid-row-gap: 8.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8.5rem 1.25rem;
     }
   }
   &__item {
@@ -173,9 +181,14 @@
   }
   &__textbox {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 2rem;
+    flex-direction: column;
+    row-gap: .5rem;
+    @media screen and (min-width: 1000px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 2rem;
+    }
   }
   &__title {
     font-size: 1.375rem;
@@ -185,14 +198,16 @@
   &__hashtag {
     display: flex;
     column-gap: .4rem;
-    font-size: 1rem;
+    font-size: .9rem;
     opacity: .4;
   }
   &__links {
-    align-self: flex-end;
     display: flex;
     align-items: center;
     column-gap: .5rem;
+    @media screen and (min-width: 1000px) {
+      align-self: flex-end;
+    }
   }
   &__link {
     column-gap: .2rem;
@@ -204,11 +219,13 @@
     overflow: hidden;
     background-color: #000;
     transform: translateZ(0);
-    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
-    $padding: 60%, 67%, 73%, 75%, 62%, 75%;
-    @for $i from 1 through 6 {
-      .section-work__item:nth-child(#{$i}) & {
-        padding-top: nth($padding, $i);
+    padding-top: 60%;
+    @media screen and (min-width: 700px) {
+      $padding: 60%, 67%, 73%, 75%, 62%, 75%;
+      @for $i from 1 through 6 {
+        .section-work__item:nth-child(#{$i}) & {
+          padding-top: nth($padding, $i);
+        }
       }
     }
     &:hover {
@@ -234,17 +251,24 @@
         flex-direction: column;
         row-gap: .6rem;
         border-bottom: 1px solid #767676;
-        padding: 1.5625rem;
-        padding-left: 3.5rem;
+        padding: 1.3rem 1.3rem 1.3rem 3.5rem;
+        @media screen and (min-width: 700px) {
+          padding-top: 1.5625rem;
+          padding-bottom: 1.5625rem;
+          padding-right: 1.5625rem;
+        }
         &:hover {
           color: $color-black;
           background-color: #fff;
         }
       }
       &__title {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         font-weight: 500;
         line-height: 1;
+        @media screen and (min-width: 700px) {
+          font-size: 2.5rem;
+        }
       }
       &__body {
         display: flex;
@@ -287,7 +311,10 @@
           background-color: #fff;
         }
         .experience__link:hover & {
-          opacity: 0;
+          color: #fff;
+          span {
+            background-color: #1c1c1c;
+          }
         }
       }
     }

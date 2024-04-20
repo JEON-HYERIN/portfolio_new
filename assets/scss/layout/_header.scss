@@ -4,11 +4,13 @@
   left: 0;
   z-index: $z-index--header;
   width: 100%;
+  font-size: 1rem;
   font-weight: 500;
-  font-variation-settings: "wght" 500;
+  @media screen and (max-width: 999px) {
+    padding: 1.25rem 0;
+  }
   @media screen and (min-width: 1000px) {
-    padding-top: 1.875rem;
-    padding-bottom: 1.875rem;
+    padding: 1.875rem 0;
   }
   &.is-scrolled {
     padding: .6875rem 0;
@@ -19,21 +21,10 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__logo {
-    font-size: 1rem;
-    pointer-events: auto;
-    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
-    fill: currentColor;
-    width: 12.375rem;
-    height: 1rem;
-    a {}
-  }
 }
 .global-nav {
   &__list {
     display: flex;
     column-gap: 2.5rem;
   }
-  &__item {}
-  &__link {}
 }
