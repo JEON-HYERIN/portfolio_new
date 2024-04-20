@@ -23,7 +23,7 @@ button {
 
 ::selection {
   background-color: $color-white;
-  color: $color-black;
+  color: $color-primary;
   text-shadow: none;
 }
 
@@ -61,7 +61,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: $color-white;
-  background-color: $color-black;
+  background-color: $color-primary;
 }
 ::-webkit-scrollbar {
   display: none;

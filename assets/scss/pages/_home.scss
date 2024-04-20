@@ -217,7 +217,7 @@
     position: relative;
     border-radius: .375rem;
     overflow: hidden;
-    background-color: #000;
+    background-color: $color-black;
     transform: translateZ(0);
     padding-top: 60%;
     @media screen and (min-width: 700px) {
@@ -258,8 +258,8 @@
           padding-right: 1.5625rem;
         }
         &:hover {
-          color: $color-black;
-          background-color: #fff;
+          color: $color-primary;
+          background-color: $color-white;
         }
       }
       &__title {
@@ -296,7 +296,7 @@
         height: 5.3125rem;
         font-size: .75rem;
         font-weight: 500;
-        color: #1c1c1c;
+        color: $color-primary;
         transform: rotate(-45deg);
         span {
           position: absolute;
@@ -308,12 +308,12 @@
           height: 1.5625rem;
           width: 18.75rem;
           margin-left: -9.375rem;
-          background-color: #fff;
+          background-color: $color-white;
         }
         .experience__link:hover & {
-          color: #fff;
+          color: $color-white;
           span {
-            background-color: #1c1c1c;
+            background-color: $color-primary;
           }
         }
       }

@@ -1,7 +1,7 @@
 .footer {
   overflow: hidden;
   background-color: $color-white;
-  color: #000;
+  color: $color-black;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
         padding: .5rem 1.25rem;
         overflow: hidden;
         border-radius: 6.25rem;
-        border: .125rem solid #000;
+        border: .125rem solid $color-black;
         transition: transform .5s cubic-bezier(.17,.67,.3,1.33);
         @media screen and (min-width: 700px) {
           padding: .75rem 2.375rem;
@@ -48,7 +48,7 @@
           font-size: 5.25rem;
         }
         .social__link:hover & {
-          color: #fff;
+          color: $color-white;
         }
       }
       &__arrow {
@@ -70,7 +70,7 @@
         bottom: 0;
         left: 0;
         left: 50%;
-        background: #000;
+        background: $color-black;
         width: 31.25rem;
         height: 31.25rem;
         border-radius: 50%;
@@ -92,7 +92,7 @@
     font-size: .75rem;
     font-size: clamp(12px, .75rem, 15px);
     text-transform: uppercase;
-    border-top: .036rem solid #000;
+    border-top: .036rem solid $color-black;
     @media screen and (min-width: 700px) {
       padding: 1rem 1.25rem;
       // margin: 0;

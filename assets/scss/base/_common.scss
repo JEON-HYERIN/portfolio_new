@@ -41,7 +41,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid $color-white;
     transform: scaleX(0);
     transform-origin: right center;
     transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
