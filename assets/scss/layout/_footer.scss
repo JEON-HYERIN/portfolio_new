@@ -1,7 +1,7 @@
 .footer {
   overflow: hidden;
   background-color: $color-white;
-  color: $color-black;
+  color: $color-primary;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -30,20 +30,23 @@
         padding: .5rem 1.25rem;
         overflow: hidden;
         border-radius: 6.25rem;
-        border: .125rem solid $color-black;
+        border: .125rem solid $color-primary;
         transition: transform .5s cubic-bezier(.17,.67,.3,1.33);
-       @include not-mobile {
-          padding: .75rem 2.375rem;
+       @include desktop {
+          padding: 12px 38px;
+          padding: clamp(.5rem, 12px, .75rem) clamp(1.25rem, 38px, 2.375rem)
         }
         &:hover {
-          transform: scale(0.95);
+          transform: scale(.95);
         }
       }
       &__text {
         font-size: 2rem;
+        font-size: clamp(2rem, 32px, 3rem);
+        line-height: 1.25;
         transition: color .5s cubic-bezier(.165,.84,.44,1) .1s;
-       @include not-mobile {
-          font-size: 5.25rem;
+       @include desktop {
+          font-size: clamp(2rem, 84px, 5.25rem);
         }
         .social__link:hover & {
           color: $color-white;
@@ -53,7 +56,7 @@
         width: 1.375rem;
         height: 1.375rem;
         transition: filter .5s cubic-bezier(.165,.84,.44,1);
-       @include not-mobile {
+       @include desktop {
           width: auto;
           height: auto;
         }
@@ -68,7 +71,7 @@
         bottom: 0;
         left: 0;
         left: 50%;
-        background: $color-black;
+        background-color: $color-primary;
         width: 31.25rem;
         height: 31.25rem;
         border-radius: 50%;
@@ -89,9 +92,14 @@
     font-size: .75rem;
     font-size: clamp(12px, .75rem, 15px);
     text-transform: uppercase;
-    border-top: .036rem solid $color-black;
+    border-top: .036rem solid $color-primary;
    @include not-mobile {
       padding: 1rem 1.25rem;
+    }
+  }
+  &__icon {
+    svg {
+      fill: currentColor;
     }
   }
 }

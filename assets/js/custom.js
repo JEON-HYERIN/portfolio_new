@@ -14,4 +14,72 @@ $(function () {
   });
 })
 
+// header
+window.addEventListener('scroll', function() {
+  const headerEl = document.querySelector('.header');
+  const visual= document.querySelector('.section-visual');
+  const visualOffset = visual.getBoundingClientRect().height;
+  const CLASSNAME = 'is-scrolled';
 
+  if(window.scrollY > visualOffset) {
+    headerEl.classList.add(CLASSNAME);
+  } else {
+    headerEl.classList.remove(CLASSNAME);
+  }
+})
+
+
+// gnb
+const navEls = document.querySelectorAll('.global-nav__item');
+
+navEls.forEach(function(navEl) {
+  const anchor = navEl.dataset.anchor;
+  
+  navEl.addEventListener('click', () => {
+    lenis.scrollTo(`#${anchor}`);
+  });
+});
+
+// visual scroll btn
+const scrollBtn = document.querySelector('.section-visual__scroll');
+
+scrollBtn.addEventListener('click', () => {
+  lenis.scrollTo('#work');
+});
+
+let mm = gsap.matchMedia();
+mm.add("(min-width: 700px)", () => {
+  gsap.from('.section-work__thumbnail *', {
+    yPercent: -3.5,
+    scale: 1.1,
+    scrollTrigger: {
+      trigger: '.section-work__list',
+      start: 'top bottom',
+      end: 'bottom center',
+      scrub: 0,
+      // markers: true
+    }
+  });
+});
+mm.add("(min-width: 1000px)", () => {
+  gsap.from('.footer__inner', {
+    yPercent: '-60',
+    scrollTrigger: {
+      trigger: '.section-work',
+      start: 'bottom bottom',
+      endTrigger: '.footer',
+      end: '30% center',
+      scrub: 0,
+      // markers: true
+    }
+  })
+
+  // $('.social__link').each(function(index, el) {
+  //   $(this).on('mouseenter', () => {
+  //     gsap.from($(this).find('.social__arrow'), {
+  //       x: '-100',
+  //       y: '100',
+  //     })
+  //   })
+  // });
+})
