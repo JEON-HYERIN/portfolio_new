@@ -591,80 +591,58 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card__list {
-  display: grid;
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
-}
-@media screen and (min-width: 700px) {
-  .card__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .card__list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.card__item {
+.experience__link {
   position: relative;
-  border: 1px solid #767676;
-  border-radius: 0.375rem;
   overflow: hidden;
-}
-@media screen and (min-width: 700px) {
-  .card__item {
-    height: 26.25rem;
-  }
-}
-.card__link {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
+  row-gap: 0.6rem;
+  border-bottom: 1px solid #767676;
   padding: 1.5625rem;
+  padding-left: 3.5rem;
 }
-.card__link:hover {
+.experience__link:hover {
   color: #1c1c1c;
   background-color: #fff;
 }
-.card__title {
+.experience__title {
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 1;
 }
-.card__body {
+.experience__body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   line-height: 1.1;
 }
-.card__description {
-  font-size: 1rem;
+.experience__description {
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
 }
-.card__arrow {
+.experience__arrow {
   font-size: 1.375rem;
   transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.card__link:hover .card__arrow {
+.experience__link:hover .experience__arrow {
   transform: translate(0.3125rem);
 }
-.card__ribbon {
+.experience__ribbon {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 5.3125rem;
   height: 5.3125rem;
   font-size: 0.75rem;
   font-weight: 500;
   color: #1c1c1c;
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
-.card__ribbon span {
+.experience__ribbon span {
   position: absolute;
-  top: 1.25rem;
+  top: 0.5rem;
   left: 50%;
   display: flex;
   align-items: center;
@@ -674,29 +652,6 @@ video {
   margin-left: -9.375rem;
   background-color: #fff;
 }
-.card__link:hover .card__ribbon {
-  display: none;
-}
-.card__eye {
-  position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1019607843);
-  transform: scale(0);
-  visibility: hidden;
-  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.card__eye svg {
-  width: 50%;
-  height: 50%;
-}
-.card__link:hover .card__eye {
-  visibility: visible;
-  transform: scale(1);
+.experience__link:hover .experience__ribbon {
+  opacity: 0;
 }
