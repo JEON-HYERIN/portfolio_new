@@ -73,13 +73,37 @@ mm.add("(min-width: 1000px)", () => {
       // markers: true
     }
   })
-
-  // $('.social__link').each(function(index, el) {
-  //   $(this).on('mouseenter', () => {
-  //     gsap.from($(this).find('.social__arrow'), {
-  //       x: '-100',
-  //       y: '100',
-  //     })
-  //   })
-  // });
+  const cursor = document.querySelector('.cursor');
+  
+  document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    cursor.style.cssText = `left: ${x}px; top: ${y}px;`;
+  });
+  
+  const anchorEls = document.querySelectorAll('a');
+  const CLASSNAME = 'is-hover';
+  anchorEls.forEach(function(el) {
+    el.addEventListener('mousemove', () => {
+      cursor.classList.add(CLASSNAME);
+    })
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove(CLASSNAME);
+    })
+  });
 })
+
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+  'September', 'October', 'November', 'December'
+];
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth();
+const yearEl = document.querySelector('.footer__year');
+const monthEl = document.querySelector('.footer__month');
+
+yearEl.textContent = year;
+monthEl.textContent = monthNames[month].substring(0, 3);
+
