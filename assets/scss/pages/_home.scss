@@ -41,7 +41,7 @@
           width: 33.3333333333%;
         }
         &:nth-child(3) {
-          width: 50%;
+          min-width: 50%;
         }
       }
     }
@@ -55,15 +55,15 @@
     align-items: center;
     row-gap: 1.5rem;
     width: 100%;
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
+    padding-left: $gutter-mobile;
+    padding-right: $gutter-mobile;
     padding-bottom: 3.125rem;
     @media (min-width: 700px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      padding-left: $gutter-not-mobile;
+      padding-right: $gutter-not-mobile;
     }
   }
   &__textbox {
@@ -253,9 +253,9 @@
         border-bottom: 1px solid #767676;
         padding: 1.3rem 1.3rem 1.3rem 3.5rem;
        @include not-mobile {
-          padding-top: 1.5625rem;
-          padding-bottom: 1.5625rem;
-          padding-right: 1.5625rem;
+          padding-top: $gutter-mobile;
+          padding-bottom: $gutter-mobile;
+          padding-right: $gutter-mobile;
         }
         &:hover {
           color: $color-primary;
@@ -267,7 +267,7 @@
         font-weight: 500;
         line-height: 1;
        @include not-mobile {
-          font-size: 2.5rem;
+          font-size: $gutter-not-mobile;
         }
       }
       &__body {
@@ -305,7 +305,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          height: 1.5625rem;
+          height: $gutter-mobile;
           width: 18.75rem;
           margin-left: -9.375rem;
           background-color: $color-white;

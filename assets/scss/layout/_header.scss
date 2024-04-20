@@ -23,6 +23,6 @@
 .global-nav {
   &__list {
     display: flex;
-    column-gap: 2.5rem;
+    column-gap: $gutter-not-mobile;
   }
 }

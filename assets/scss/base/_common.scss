@@ -1,16 +1,16 @@
 .common-inner {
   max-width: 130rem;
   margin: 0 auto;
-  padding-left: 1.5625rem;
-  padding-right: 1.5625rem;
+  padding-left: $gutter-mobile;
+  padding-right: $gutter-mobile;
   @media (min-width: 700px) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: $gutter-not-mobile;
+    padding-right: $gutter-not-mobile;
   }
 }
 
 .common-headline {
-  margin: 2.5rem 0 2.1875rem;
+  margin: $gutter-not-mobile 0 2.1875rem;
   padding-top: .9375rem;
   border-top: 1px solid rgba(255, 255, 255, .4);
   @media screen and (min-width: 700px) {
