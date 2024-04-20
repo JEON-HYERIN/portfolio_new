@@ -2,7 +2,7 @@
 .section-visual {
   position: relative;
   height: 150vh;
-  @include not-mobile {
+  @include desktop {
     height: 200vh;
   }
   &__sticky {
@@ -168,9 +168,11 @@
     padding-top: 3rem;
   }
   &__row {
-    padding-bottom: 5rem;
-   @include not-mobile {
-      padding-bottom: 8.75rem;
+    & + & {
+      padding-top: 5rem;
+     @include not-mobile {
+        padding-top: 8.75rem;
+      }
     }
   }
   &__list {

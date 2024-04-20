@@ -60,6 +60,16 @@ mm.add("(min-width: 700px)", () => {
       // markers: true
     }
   });
+  const visualTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section-visual',
+      start: 'center bottom',
+      end: '+=3000',
+      scrub: 0,
+      // markers: true,
+    }
+  });
+  visualTl.to('.section-visual__background', {opacity: 0}, 'a')
 });
 mm.add("(min-width: 1000px)", () => {
   gsap.from('.footer__inner', {
@@ -92,6 +102,17 @@ mm.add("(min-width: 1000px)", () => {
       cursor.classList.remove(CLASSNAME);
     })
   });
+  const visualTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.section-visual',
+      start: 'center bottom',
+      end: '+=3000',
+      scrub: 0,
+      // markers: true,
+    }
+  });
+  visualTl.to('.section-work', {yPercent: -20}, 'a')
+  visualTl.to('.section-visual__background', {opacity: 0}, 'a')
 })
 
 const monthNames = [
@@ -106,15 +127,3 @@ const monthEl = document.querySelector('.footer__month');
 
 yearEl.textContent = year;
 monthEl.textContent = monthNames[month].substring(0, 3);
-
-
-const visualTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.section-visual',
-    start: 'center bottom',
-    end: '+=3000',
-    scrub: 0,
-    // markers: true,
-  }
-});
-visualTl.to('.section-visual__background', {opacity: 0})

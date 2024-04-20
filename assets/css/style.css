@@ -406,7 +406,7 @@ body {
   position: relative;
   height: 150vh;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
   .section-visual {
     height: 200vh;
   }
@@ -548,12 +548,12 @@ body {
     padding-top: 3rem;
   }
 }
-.section-work__row {
-  padding-bottom: 5rem;
+.section-work__row + .section-work__row {
+  padding-top: 5rem;
 }
 @media screen and (min-width: 700px) {
-  .section-work__row {
-    padding-bottom: 8.75rem;
+  .section-work__row + .section-work__row {
+    padding-top: 8.75rem;
   }
 }
 .section-work__list {
