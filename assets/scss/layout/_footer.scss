@@ -6,8 +6,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 3.75rem;
-    
-    @media screen and (min-width: 1000px) {
+   @include desktop {
       justify-content: space-between;
       height: 60vh;
     }
@@ -19,7 +18,7 @@
       align-items: flex-start;
       row-gap: 1.25rem;
       padding: 3.75rem 1.25rem 0;
-      @media screen and (min-width: 1000px) {
+     @include desktop {
         flex-direction: row;
         column-gap: 2.25rem;
       }
@@ -33,7 +32,7 @@
         border-radius: 6.25rem;
         border: .125rem solid $color-black;
         transition: transform .5s cubic-bezier(.17,.67,.3,1.33);
-        @media screen and (min-width: 700px) {
+       @include not-mobile {
           padding: .75rem 2.375rem;
         }
         &:hover {
@@ -43,8 +42,7 @@
       &__text {
         font-size: 2rem;
         transition: color .5s cubic-bezier(.165,.84,.44,1) .1s;
-        @media screen and (min-width: 700px) {
-          // font-size: 3.5rem;
+       @include not-mobile {
           font-size: 5.25rem;
         }
         .social__link:hover & {
@@ -55,7 +53,7 @@
         width: 1.375rem;
         height: 1.375rem;
         transition: filter .5s cubic-bezier(.165,.84,.44,1);
-        @media screen and (min-width: 700px) {
+       @include not-mobile {
           width: auto;
           height: auto;
         }
@@ -88,15 +86,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem;
-    // margin: 0 -1.5625rem;
     font-size: .75rem;
     font-size: clamp(12px, .75rem, 15px);
     text-transform: uppercase;
     border-top: .036rem solid $color-black;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       padding: 1rem 1.25rem;
-      // margin: 0;
-      // font-size: 0.584rem;
     }
   }
 }

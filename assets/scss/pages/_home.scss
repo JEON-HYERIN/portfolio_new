@@ -23,17 +23,17 @@
     font-weight: 400;
     font-variation-settings: "wght" 400;
     line-height: 1.4;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       justify-content: flex-end;
       font-size: 12vw;
     }
-    @media screen and (min-width: 1000px) {
+   @include desktop {
         font-size: 12.5rem;
     }
     span {
       padding-left: 1.25rem;
       white-space: nowrap;
-      @media screen and (min-width: 700px) {
+     @include not-mobile {
         &:nth-child(1) {
           width: 66.6666666667%;
         }
@@ -78,7 +78,7 @@
       border-color: #fff9;
       background-color: #1c1c1c33;
     }
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       width: 33.3333333333%;
       padding: 1.25rem;
       margin-left: 1.25rem;
@@ -88,7 +88,7 @@
     font-family: playground, "Neue Montreal";
     font-size: 9vw;
     line-height: 1;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       font-size: 3rem;
     }
   }
@@ -116,7 +116,7 @@
 
 // about
 // .section-about {
-//   @media screen and (min-width: 700px) {
+//  @include not-mobile {
 //     padding-bottom: 10.5rem;
 //   }
 //   &__content {
@@ -140,7 +140,7 @@
 //     font-size: 1.375rem;
 //     font-weight: 400;
 //     line-height: 1.2;
-//     @media screen and (min-width: 1000px) {
+//    @include desktop {
 //       width: 33.3333333333%;
 //     }
 //   }
@@ -148,19 +148,19 @@
 
 // work
 .section-work {
-  @media screen and (min-width: 700px) {
+ @include not-mobile {
     padding-top: 3rem;
   }
   &__row {
     padding-bottom: 5rem;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       padding-bottom: 8.75rem;
     }
   }
   &__list {
     display: grid;
     row-gap: 3.5rem;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       grid-template-columns: repeat(3, 1fr);
       gap: 8.5rem 1.25rem;
     }
@@ -169,7 +169,7 @@
     display: flex;
     flex-direction: column-reverse;
     row-gap: .625rem;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       row-gap: 1.25rem;
     }
   }
@@ -183,7 +183,7 @@
     display: flex;
     flex-direction: column;
     row-gap: .5rem;
-    @media screen and (min-width: 1000px) {
+   @include desktop {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -205,7 +205,7 @@
     display: flex;
     align-items: center;
     column-gap: .5rem;
-    @media screen and (min-width: 1000px) {
+   @include desktop {
       align-self: flex-end;
     }
   }
@@ -220,7 +220,7 @@
     background-color: $color-black;
     transform: translateZ(0);
     padding-top: 60%;
-    @media screen and (min-width: 700px) {
+   @include not-mobile {
       $padding: 60%, 67%, 73%, 75%, 62%, 75%;
       @for $i from 1 through 6 {
         .section-work__item:nth-child(#{$i}) & {
@@ -252,7 +252,7 @@
         row-gap: .6rem;
         border-bottom: 1px solid #767676;
         padding: 1.3rem 1.3rem 1.3rem 3.5rem;
-        @media screen and (min-width: 700px) {
+       @include not-mobile {
           padding-top: 1.5625rem;
           padding-bottom: 1.5625rem;
           padding-right: 1.5625rem;
@@ -266,7 +266,7 @@
         font-size: 1.7rem;
         font-weight: 500;
         line-height: 1;
-        @media screen and (min-width: 700px) {
+       @include not-mobile {
           font-size: 2.5rem;
         }
       }

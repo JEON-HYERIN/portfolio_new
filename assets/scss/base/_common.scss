@@ -54,13 +54,13 @@
 
 .common-display-mo {
   display: block;
-  @media screen and (min-width: 1000px) {
+ @include desktop {
     display: none;
   }
 }
 .common-display-pc {
   display: none;
-  @media screen and (min-width: 1000px) {
+ @include desktop {
     display: block;
   }
 }
