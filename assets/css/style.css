@@ -204,7 +204,6 @@ body {
 .common-headline span {
   font-size: 0.8rem;
   font-weight: 500;
-  font-variation-settings: "wght" 500;
 }
 .common-headline span::before {
   content: "⬤";
@@ -419,7 +418,6 @@ body {
   font-family: playground, "Neue Montreal";
   font-size: 15vw;
   font-weight: 400;
-  font-variation-settings: "wght" 400;
   line-height: 1.4;
 }
 @media screen and (min-width: 700px) {
@@ -457,9 +455,7 @@ body {
   align-items: center;
   row-gap: 1.5rem;
   width: 100%;
-  padding-left: 1.5625rem;
-  padding-right: 1.5625rem;
-  padding-bottom: 3.125rem;
+  padding: 0 1.5625rem 3.125rem;
 }
 @media (min-width: 700px) {
   .section-visual__body {

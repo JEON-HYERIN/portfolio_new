@@ -21,7 +21,6 @@
     font-family: playground, "Neue Montreal";
     font-size: 15vw;
     font-weight: 400;
-    font-variation-settings: "wght" 400;
     line-height: 1.4;
    @include not-mobile {
       justify-content: flex-end;
@@ -55,9 +54,7 @@
     align-items: center;
     row-gap: 1.5rem;
     width: 100%;
-    padding-left: $gutter-mobile;
-    padding-right: $gutter-mobile;
-    padding-bottom: 3.125rem;
+    padding: 0 $gutter-mobile 3.125rem;
     @media (min-width: 700px) {
       flex-direction: row;
       justify-content: space-between;
