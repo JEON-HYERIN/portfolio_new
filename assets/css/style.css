@@ -751,7 +751,6 @@ body {
 }
 
 .cursor {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -759,9 +758,9 @@ body {
   mix-blend-mode: difference;
   pointer-events: none;
 }
-@media screen and (min-width: 1000px) {
+@media (hover: none) {
   .cursor {
-    display: block;
+    display: none;
   }
 }
 .cursor__pointer {

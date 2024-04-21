@@ -367,15 +367,14 @@
   }
 }
 .cursor {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: $z-index--cursor;
   mix-blend-mode: difference;
   pointer-events: none;
-  @include desktop {
-    display: block;
+  @media (hover: none) {
+    display: none;
   }
   &__pointer {
     position: absolute;
