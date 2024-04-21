@@ -20,6 +20,7 @@
   &__headline {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 1.25rem;
     width: 100%;
     padding-bottom: 10vh;
     font-family: playground, "Neue Montreal";
@@ -28,6 +29,7 @@
     line-height: 1.4;
    @include not-mobile {
       justify-content: flex-end;
+      column-gap: 0;
       padding-bottom: 0;
       margin-left: -1.25rem;
       font-size: 12vw;
