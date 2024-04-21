@@ -59,7 +59,6 @@ window.addEventListener('scroll', function() {
   }
 })
 
-
 // gnb
 const navEls = document.querySelectorAll('.global-nav__item');
 
@@ -79,18 +78,6 @@ scrollBtn.addEventListener('click', () => {
 });
 
 let mm = gsap.matchMedia();
-// mm.add("(max-width: 999px)", () => {
-//   const visualTl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: '.section-visual',
-//       start: 'center bottom',
-//       end: '+=3000',
-//       scrub: 0,
-//       // markers: true,
-//     }
-//   });
-//   visualTl.to('.section-visual__background', {opacity: 0}, 'a')
-// })
 mm.add("(min-width: 700px)", () => {
   gsap.from('.section-work__thumbnail *', {
     yPercent: -3.5,
@@ -116,6 +103,7 @@ mm.add("(min-width: 1000px)", () => {
       // markers: true
     }
   })
+  
   const cursor = document.querySelector('.cursor');
   
   document.addEventListener('mousemove', (e) => {
