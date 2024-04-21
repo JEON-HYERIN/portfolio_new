@@ -128,6 +128,11 @@ const visualTl = gsap.timeline({
     end: '+=1200',
     scrub: 0,
     // markers: true,
+    onUpdate: function(self) {
+      const value = self.progress * 25;
+
+      visualTl.from('.section-visual__background img', {x: -value},'a');
+    }
   }
 });
-visualTl.to('.section-visual__background', {opacity: 0}, 'a')
+visualTl.to('.section-visual__background', {opacity: 0}, 'a');
