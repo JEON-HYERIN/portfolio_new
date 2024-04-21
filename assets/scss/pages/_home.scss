@@ -170,6 +170,7 @@
 
 // work
 .section-work {
+  position: relative;
   padding-bottom: 5rem;
  @include not-mobile {
     padding-bottom: 8.75rem;

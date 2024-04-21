@@ -14,6 +14,11 @@ $(function () {
   });
 })
 
+// 새로고침 시 사용자 스크롤 위치 저장하지 않음
+if (history.scrollRestoration) {
+  history.scrollRestoration = "manual";
+}
+
 // header
 window.addEventListener('scroll', function() {
   const headerEl = document.querySelector('.header');
