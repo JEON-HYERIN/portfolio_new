@@ -141,15 +141,15 @@
 // work
 .section-work {
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 7.5rem;
  @include not-mobile {
     padding-bottom: 8.75rem;
   }
   &__row {
     & + & {
-      padding-top: 5rem;
+      padding-top: 2.5rem;
      @include not-mobile {
-        padding-top: 8.75rem;
+        padding-top: 3.75rem;
       }
     }
   }
