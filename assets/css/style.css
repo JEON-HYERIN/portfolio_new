@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -370,7 +371,13 @@ body {
 .section-visual {
   position: relative;
   height: 100vh;
+  min-height: 550px;
   overflow: hidden;
+}
+@media (orientation: landscape) {
+  .section-visual {
+    min-height: 700px;
+  }
 }
 .section-visual .common-inner {
   position: absolute;
@@ -427,7 +434,7 @@ body {
     min-width: 50%;
   }
 }
-.section-visual__body {
+.section-visual__motto {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -439,7 +446,7 @@ body {
   padding-bottom: 1.25rem;
 }
 @media (min-width: 700px) {
-  .section-visual__body {
+  .section-visual__motto {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -476,12 +483,17 @@ body {
   }
 }
 .section-visual__description {
-  font-size: 1rem;
-  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.2rem;
 }
-.section-visual__description strong {
-  display: block;
-  font-weight: 700;
+.section-visual__description .english {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.section-visual__description .korean {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.8rem;
 }
 .section-visual__arrow {
   font-size: 150%;
@@ -499,6 +511,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  min-height: inherit;
 }
 .section-visual__background {
   position: absolute;
