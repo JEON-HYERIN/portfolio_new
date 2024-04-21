@@ -408,10 +408,11 @@ body.is-loading {
 .section-visual .common-inner {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 .section-visual__content {
   position: relative;
