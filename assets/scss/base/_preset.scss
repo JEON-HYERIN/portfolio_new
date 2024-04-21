@@ -1,11 +1,11 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 button {
-	padding: 0;
-	cursor: pointer;
-	outline: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 #wrap {
@@ -33,21 +33,27 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
+
   @media (min-width: 700px) {
     font-size: 13px;
   }
+
   @media (min-width: 1000px) {
     font-size: 14px;
   }
+
   @media (min-width: 1280px) {
     font-size: 16px;
   }
+
   @media (min-width: 1600px) {
     font-size: 18px;
   }
+
   @media (min-width: 2000px) {
     font-size: 21px;
   }
+
   @media (min-width: 2400px) {
     font-size: 24px;
   }
@@ -60,10 +66,12 @@ body {
   line-height: 1.5;
   color: $color-white;
   background-color: $color-primary;
+
   &.is-loading {
     cursor: wait;
   }
 }
+
 ::-webkit-scrollbar {
   display: none;
 }

@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding-left: $gutter-mobile;
   padding-right: $gutter-mobile;
+
   @media (min-width: 700px) {
     padding-left: $gutter-not-mobile;
     padding-right: $gutter-not-mobile;
@@ -13,12 +14,15 @@
   margin: $gutter-not-mobile 0 2.1875rem;
   padding-top: .9375rem;
   border-top: 1px solid rgba(255, 255, 255, .4);
+
   @media screen and (min-width: 700px) {
     margin-bottom: 3.75rem;
   }
+
   span {
     font-size: .8rem;
     font-weight: 500;
+
     &::before {
       content: "\2b24";
       display: inline-block;
@@ -30,13 +34,16 @@
 
 .common-display-mo {
   display: block;
- @include desktop {
+
+  @include desktop {
     display: none;
   }
 }
+
 .common-display-pc {
   display: none;
- @include desktop {
+
+  @include desktop {
     display: block;
   }
 }

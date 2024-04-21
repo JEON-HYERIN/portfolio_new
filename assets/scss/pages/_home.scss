@@ -18,9 +18,11 @@
   height: 100vh;
   min-height: 550px;
   overflow: hidden;
+
   @media (orientation: landscape) {
     min-height: 700px;
   }
+
   .common-inner {
     position: absolute;
     top: 0;
@@ -29,12 +31,14 @@
     height: 100%;
     z-index: 1;
   }
+
   &__content {
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
   }
+
   &__headline {
     display: flex;
     flex-wrap: wrap;
@@ -45,32 +49,39 @@
     font-size: 15vw;
     font-weight: 400;
     line-height: 1.4;
-   @include not-mobile {
+
+    @include not-mobile {
       justify-content: flex-end;
       column-gap: 0;
       padding-bottom: 0;
       margin-left: -1.25rem;
       font-size: 12vw;
     }
-   @include desktop {
-        font-size: 12.5rem;
+
+    @include desktop {
+      font-size: 12.5rem;
     }
+
     span:not(.word) {
       white-space: nowrap;
       overflow: hidden;
-     @include not-mobile {
+
+      @include not-mobile {
         &:nth-child(1) {
           width: 66.6666666667%;
         }
+
         &:nth-child(2) {
           width: 33.3333333333%;
         }
+
         &:nth-child(3) {
           min-width: 50%;
         }
       }
     }
   }
+
   &__motto {
     position: absolute;
     left: 0;
@@ -81,6 +92,7 @@
     row-gap: 1.5rem;
     width: 100%;
     padding-bottom: 1.25rem;
+
     @media (min-width: 700px) {
       flex-direction: row;
       justify-content: space-between;
@@ -88,6 +100,7 @@
       padding-bottom: 3.125rem;
     }
   }
+
   &__textbox {
     display: flex;
     flex-direction: column;
@@ -96,50 +109,62 @@
     padding: .625rem;
     border: 1px solid rgba(255, 255, 255, .4);
     border-radius: .3125rem;
+
     &:hover {
       border-color: rgba(255, 255, 255, .6);
       background-color: rgba(255, 255, 255, .1);
     }
-   @include not-mobile {
+
+    @include not-mobile {
       width: 33.3333333333%;
       padding: 1.25rem;
     }
   }
+
   &__title {
     font-family: playground, "Neue Montreal";
     font-size: 9vw;
     line-height: 1;
-   @include not-mobile {
+
+    @include not-mobile {
       font-size: 3rem;
     }
   }
+
   &__description {
     display: flex;
     flex-direction: column;
     row-gap: .2rem;
+
     .english {
       font-size: 1rem;
       font-weight: 600;
     }
+
     .korean {
       font-size: .8rem;
     }
   }
+
   &__arrow {
     font-size: 150%;
-    transition: transform .6s cubic-bezier(.075,.82,.165,1);
+    transition: transform .6s cubic-bezier(.075, .82, .165, 1);
+
     .section-visual__link:hover & {
       transform: translate(.3125rem);
     }
   }
+
   &__scroll {
     &:hover {
       opacity: .5;
     }
+
     span {
       display: block;
     }
   }
+
   &__fixed {
     position: fixed;
     top: 0;
@@ -148,6 +173,7 @@
     height: 100%;
     min-height: inherit;
   }
+
   &__background {
     position: absolute;
     top: 0;
@@ -155,7 +181,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    img  {
+
+    img {
       position: absolute;
       top: 0;
       left: 0;
@@ -170,69 +197,84 @@
 .section-work {
   position: relative;
   padding-bottom: 7.5rem;
- @include not-mobile {
+
+  @include not-mobile {
     padding-bottom: 8.75rem;
   }
+
   &__row {
-    & + & {
+    &+& {
       padding-top: 2.5rem;
-     @include not-mobile {
+
+      @include not-mobile {
         padding-top: 3.75rem;
       }
     }
   }
+
   &__list {
     display: grid;
     row-gap: 3.5rem;
-   @include not-mobile {
+
+    @include not-mobile {
       grid-template-columns: repeat(3, 1fr);
       gap: 8.5rem 1.25rem;
     }
   }
+
   &__item {
     display: flex;
     flex-direction: column-reverse;
     row-gap: .625rem;
-   @include not-mobile {
+
+    @include not-mobile {
       row-gap: 1.25rem;
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: 1.5rem;
   }
+
   &__textbox {
     display: flex;
     flex-direction: column;
     row-gap: .5rem;
-   @include desktop {
+
+    @include desktop {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       column-gap: 2rem;
     }
   }
+
   &__title {
     font-size: 1.375rem;
     font-weight: 400;
     line-height: 1.2;
   }
+
   &__hashtag {
     display: flex;
     column-gap: .4rem;
     font-size: .9rem;
     opacity: .4;
   }
+
   &__links {
     display: flex;
     align-items: center;
     column-gap: .5rem;
-   @include desktop {
+
+    @include desktop {
       align-self: flex-end;
     }
   }
+
   &__link {
     position: relative;
     display: flex;
@@ -241,6 +283,7 @@
     padding-bottom: 0.625rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     font-size: .8rem;
+
     &::before {
       content: '';
       position: absolute;
@@ -252,11 +295,13 @@
       transform-origin: right center;
       transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
+
     &:hover::before {
       transform: scale(1);
       transform-origin: left center;
     }
   }
+
   &__thumbnail {
     position: relative;
     border-radius: .375rem;
@@ -264,17 +309,21 @@
     background-color: $color-black;
     transform: translateZ(0);
     padding-top: 60%;
-   @include not-mobile {
+
+    @include not-mobile {
       $padding: 60%, 67%, 73%, 75%, 62%, 75%;
+
       @for $i from 1 through 6 {
         .section-work__item:nth-child(#{$i}) & {
           padding-top: nth($padding, $i);
         }
       }
     }
+
     &:hover {
       opacity: .75;
     }
+
     video,
     img {
       position: absolute;
@@ -285,6 +334,7 @@
       object-fit: cover;
     }
   }
+
   &__experience {
     @at-root .experience {
       &__link {
@@ -296,42 +346,51 @@
         row-gap: .6rem;
         border-bottom: 1px solid #767676;
         padding: 1.3rem 1.3rem 1.3rem 3.5rem;
-       @include not-mobile {
+
+        @include not-mobile {
           padding-top: $gutter-mobile;
           padding-bottom: $gutter-mobile;
           padding-right: $gutter-mobile;
         }
+
         &:hover {
           color: $color-primary;
           background-color: $color-white;
         }
       }
+
       &__title {
         font-size: 1.7rem;
         font-weight: 500;
         line-height: 1;
-       @include not-mobile {
+
+        @include not-mobile {
           font-size: $gutter-not-mobile;
         }
       }
+
       &__body {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         line-height: 1.1;
       }
+
       &__description {
         display: flex;
         flex-direction: column;
         font-size: 1rem;
       }
+
       &__arrow {
         font-size: 1.375rem;
-        transition: transform .6s cubic-bezier(.075,.82,.165,1);
+        transition: transform .6s cubic-bezier(.075, .82, .165, 1);
+
         .experience__link:hover & {
           transform: translate(.3125rem);
         }
       }
+
       &__ribbon {
         position: absolute;
         top: 0;
@@ -342,6 +401,7 @@
         font-weight: 500;
         color: $color-primary;
         transform: rotate(-45deg);
+
         span {
           position: absolute;
           top: .5rem;
@@ -354,8 +414,10 @@
           margin-left: -9.375rem;
           background-color: $color-white;
         }
+
         .experience__link:hover & {
           color: $color-white;
+
           span {
             background-color: $color-primary;
           }
@@ -373,12 +435,15 @@
   z-index: $z-index--cursor;
   mix-blend-mode: difference;
   pointer-events: none;
+
   .is-loading & {
     display: none;
   }
+
   @media (hover: none) {
     display: none;
   }
+
   &__pointer {
     position: absolute;
     top: 50%;
@@ -391,6 +456,7 @@
     transition-property: width, height;
     transition-duration: .2s;
     transition-timing-function: ease-out;
+
     .is-hover & {
       width: 4rem;
       height: 4rem;

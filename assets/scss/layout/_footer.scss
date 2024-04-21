@@ -2,15 +2,18 @@
   overflow: hidden;
   background-color: $color-white;
   color: $color-primary;
+
   &__inner {
     display: flex;
     flex-direction: column;
     row-gap: 3.75rem;
-   @include desktop {
+
+    @include desktop {
       justify-content: space-between;
       height: 60vh;
     }
   }
+
   &__social {
     @at-root .social {
       display: flex;
@@ -18,10 +21,12 @@
       align-items: flex-start;
       row-gap: 1.25rem;
       padding: 3.75rem 1.25rem 0;
-     @include desktop {
+
+      @include desktop {
         flex-direction: row;
         column-gap: 2.25rem;
       }
+
       &__link {
         position: relative;
         display: inline-flex;
@@ -31,39 +36,48 @@
         overflow: hidden;
         border-radius: 6.25rem;
         border: .125rem solid $color-primary;
-        transition: transform .5s cubic-bezier(.17,.67,.3,1.33);
-       @include desktop {
+        transition: transform .5s cubic-bezier(.17, .67, .3, 1.33);
+
+        @include desktop {
           padding: 12px 38px;
           padding: clamp(.5rem, 12px, .75rem) clamp(1.25rem, 38px, 2.375rem)
         }
+
         &:hover {
           transform: scale(.95);
         }
       }
+
       &__text {
         font-size: 2rem;
         font-size: clamp(2rem, 32px, 3rem);
         line-height: 1.25;
-        transition: color .5s cubic-bezier(.165,.84,.44,1) .1s;
-       @include desktop {
+        transition: color .5s cubic-bezier(.165, .84, .44, 1) .1s;
+
+        @include desktop {
           font-size: clamp(2rem, 84px, 5.25rem);
         }
+
         .social__link:hover & {
           color: $color-white;
         }
       }
+
       &__arrow {
         width: 1.375rem;
         height: 1.375rem;
-        transition: filter .5s cubic-bezier(.165,.84,.44,1);
-       @include desktop {
+        transition: filter .5s cubic-bezier(.165, .84, .44, 1);
+
+        @include desktop {
           width: auto;
           height: auto;
         }
+
         .social__link:hover & {
           filter: invert(1);
         }
       }
+
       &__cover {
         position: absolute;
         top: 0;
@@ -76,14 +90,16 @@
         height: 31.25rem;
         border-radius: 50%;
         transform: translateX(-50%) scale(0);
-        transition: transform .75s cubic-bezier(.165,.84,.44,1);
+        transition: transform .75s cubic-bezier(.165, .84, .44, 1);
         z-index: -1;
+
         .social__link:hover & {
           transform: translateX(-50%) scale(1.75);
         }
       }
     }
   }
+
   &__information {
     display: flex;
     justify-content: space-between;
@@ -93,10 +109,12 @@
     font-size: clamp(12px, .75rem, 15px);
     text-transform: uppercase;
     border-top: .036rem solid $color-primary;
-   @include not-mobile {
+
+    @include not-mobile {
       padding: 1rem 1.25rem;
     }
   }
+
   &__icon {
     svg {
       fill: currentColor;
