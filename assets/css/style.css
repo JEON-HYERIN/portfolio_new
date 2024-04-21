@@ -262,7 +262,7 @@ body {
   padding: 1.25rem 0;
   font-size: 1rem;
   font-weight: 500;
-  transition: padding 0.1s;
+  transition: padding 0.3s;
 }
 @media screen and (min-width: 1000px) {
   .header {
@@ -404,37 +404,28 @@ body {
 
 .section-visual {
   position: relative;
-  height: 150vh;
-}
-@media screen and (min-width: 1000px) {
-  .section-visual {
-    height: 200vh;
-  }
-}
-.section-visual__sticky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 .section-visual .common-inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 .section-visual__content {
-  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .section-visual__headline {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -1.25rem;
+  width: 100%;
+  padding-bottom: 10vh;
   font-family: playground, "Neue Montreal";
   font-size: 15vw;
   font-weight: 400;
@@ -443,6 +434,8 @@ body {
 @media screen and (min-width: 700px) {
   .section-visual__headline {
     justify-content: flex-end;
+    padding-bottom: 0;
+    margin-left: -1.25rem;
     font-size: 12vw;
   }
 }
@@ -452,7 +445,6 @@ body {
   }
 }
 .section-visual__headline span {
-  padding-left: 1.25rem;
   white-space: nowrap;
 }
 @media screen and (min-width: 700px) {
@@ -475,15 +467,14 @@ body {
   align-items: center;
   row-gap: 1.5rem;
   width: 100%;
-  padding: 0 1.5625rem 3.125rem;
+  padding-bottom: 1.25rem;
 }
 @media (min-width: 700px) {
   .section-visual__body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-bottom: 3.125rem;
   }
 }
 .section-visual__textbox {
@@ -503,7 +494,6 @@ body {
   .section-visual__textbox {
     width: 33.3333333333%;
     padding: 1.25rem;
-    margin-left: 1.25rem;
   }
 }
 .section-visual__title {
@@ -534,18 +524,36 @@ body {
 .section-visual__scroll:hover {
   opacity: 0.5;
 }
+.section-visual__fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .section-visual__background {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
+  width: 100%;
+  height: 100%;
+}
+.section-visual__background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+.section-work {
+  padding-bottom: 5rem;
+}
 @media screen and (min-width: 700px) {
   .section-work {
-    padding-top: 3rem;
+    padding-bottom: 8.75rem;
   }
 }
 .section-work__row + .section-work__row {

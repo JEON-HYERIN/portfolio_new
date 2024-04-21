@@ -1,47 +1,41 @@
 // visual
 .section-visual {
   position: relative;
-  height: 150vh;
-  @include desktop {
-    height: 200vh;
-  }
-  &__sticky {
+  height: 100vh;
+  overflow: hidden;
+  .common-inner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .common-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     height: 100%;
+    z-index: 1;
   }
   &__content {
-    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
   &__headline {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -1.25rem;
+    width: 100%;
+    padding-bottom: 10vh;
     font-family: playground, "Neue Montreal";
     font-size: 15vw;
     font-weight: 400;
     line-height: 1.4;
    @include not-mobile {
       justify-content: flex-end;
+      padding-bottom: 0;
+      margin-left: -1.25rem;
       font-size: 12vw;
     }
    @include desktop {
         font-size: 12.5rem;
     }
     span {
-      padding-left: 1.25rem;
       white-space: nowrap;
      @include not-mobile {
         &:nth-child(1) {
@@ -65,13 +59,12 @@
     align-items: center;
     row-gap: 1.5rem;
     width: 100%;
-    padding: 0 $gutter-mobile 3.125rem;
+    padding-bottom: 1.25rem;
     @media (min-width: 700px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      padding-left: $gutter-not-mobile;
-      padding-right: $gutter-not-mobile;
+      padding-bottom: 3.125rem;
     }
   }
   &__textbox {
@@ -89,7 +82,6 @@
    @include not-mobile {
       width: 33.3333333333%;
       padding: 1.25rem;
-      margin-left: 1.25rem;
     }
   }
   &__title {
@@ -120,13 +112,27 @@
       opacity: .5;
     }
   }
+  &__fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   &__background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("../images/section-visual-bg.png") no-repeat fixed center/cover;
+    width: 100%;
+    height: 100%;
+    img  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -164,8 +170,9 @@
 
 // work
 .section-work {
+  padding-bottom: 5rem;
  @include not-mobile {
-    padding-top: 3rem;
+    padding-bottom: 8.75rem;
   }
   &__row {
     & + & {
