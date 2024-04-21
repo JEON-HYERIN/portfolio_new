@@ -60,6 +60,9 @@ body {
   line-height: 1.5;
   color: $color-white;
   background-color: $color-primary;
+  &.is-loading {
+    cursor: wait;
+  }
 }
 ::-webkit-scrollbar {
   display: none;

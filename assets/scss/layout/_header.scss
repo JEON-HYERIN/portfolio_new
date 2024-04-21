@@ -20,10 +20,18 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__logo {
+    a {
+      display: block;
+    }
+  }
 }
 .global-nav {
   &__list {
     display: flex;
     column-gap: $gutter-not-mobile;
+  }
+  &__link {
+    display: block;
   }
 }

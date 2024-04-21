@@ -19,6 +19,32 @@ if (history.scrollRestoration) {
   history.scrollRestoration = "manual";
 }
 
+const visualText = new SplitType('.section-visual__headline', {types: 'words', tagName: 'span'});
+
+// loading
+const loadingTl = gsap.timeline({
+  // paused: true,
+  defaults: {
+    duration: .6,
+  },
+  onStart: function() {
+    document.body.classList.add('is-loading');
+    lenis.stop();
+  },
+  onComplete: function() {
+    lenis.start();
+  }
+});
+loadingTl
+.to('.loading', {yPercent: -100, delay: .5, duration: .6, onUpdate: function() {document.body.classList.remove('is-loading');}}, 'a')
+.set('.loading', {display: 'none'}, 'b')
+.from('.section-visual__background img', {y: '12.5rem', opacity: 0}, 'b')
+.from('.section-visual__headline .word', {yPercent: 150, opacity: 0, duration: .8, stagger: .12}, 'b')
+.from('.header__logo a', {y: '3.75rem', opacity: 0}, 'b+=.6')
+.from('.section-visual__textbox', {y: '3.75rem', opacity: 0}, 'b+=.7')
+.from('.global-nav__link', {y: '3.75rem', opacity: 0, stagger: .1}, 'b+=.8')
+.from('.section-visual__scroll span', {y: '3.75rem', opacity: 0}, 'b+=.8')
+
 // header
 window.addEventListener('scroll', function() {
   const headerEl = document.querySelector('.header');
