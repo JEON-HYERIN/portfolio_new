@@ -106,10 +106,7 @@ mm.add("(min-width: 1000px)", () => {
   });
 })
 
-const monthNames = [
-  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-  'September', 'October', 'November', 'December'
-];
+const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const date = new Date();
 const year = date.getFullYear();
 const month = date.getMonth();
