@@ -219,6 +219,10 @@ body {
   }
 }
 
+.korean {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -492,7 +496,6 @@ body {
   font-weight: 600;
 }
 .section-visual__description .korean {
-  font-family: "Noto Sans KR", sans-serif;
   font-size: 0.8rem;
 }
 .section-visual__arrow {
