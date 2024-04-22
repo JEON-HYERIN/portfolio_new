@@ -339,6 +339,12 @@
 
   &__experience {
     @at-root .experience {
+      &__item {
+        &+& {
+          margin-top: -1px;
+        }
+      }
+
       &__link {
         position: relative;
         overflow: hidden;
@@ -346,8 +352,10 @@
         justify-content: space-between;
         flex-direction: column;
         row-gap: .6rem;
-        border-bottom: 1px solid #767676;
         padding: 1.3rem 1.3rem 1.3rem 3.5rem;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #767676;
 
         @include not-mobile {
           padding-top: $gutter-mobile;
