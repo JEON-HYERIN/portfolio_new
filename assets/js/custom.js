@@ -70,13 +70,30 @@ navEls.forEach(function(navEl) {
   });
 });
 
-// visual scroll btn
+// visual
 const scrollBtn = document.querySelector('.section-visual__scroll');
 
 scrollBtn.addEventListener('click', () => {
   lenis.scrollTo('#work');
 });
 
+const visualTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.section-visual',
+    start: 'center center',
+    end: '+=1200',
+    scrub: 0,
+    // markers: true,
+    onUpdate: function(self) {
+      const value = self.progress * 25;
+
+      visualTl.from('.section-visual__background img', {x: -value}, 'a');
+    }
+  }
+});
+visualTl.to('.section-visual__background', {opacity: 0}, 'a');
+
+// matchMedia
 let mm = gsap.matchMedia();
 mm.add("(min-width: 700px)", () => {
   gsap.from('.section-work__thumbnail *', {
@@ -103,28 +120,9 @@ mm.add("(min-width: 1000px)", () => {
       // markers: true
     }
   })
-  
-  const cursor = document.querySelector('.cursor');
-  
-  document.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    
-    cursor.style.cssText = `left: ${x}px; top: ${y}px;`;
-  });
-  
-  const anchorEls = document.querySelectorAll('a');
-  const CLASSNAME = 'is-hover';
-  anchorEls.forEach(function(el) {
-    el.addEventListener('mousemove', () => {
-      cursor.classList.add(CLASSNAME);
-    })
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove(CLASSNAME);
-    })
-  });
 })
 
+// footer
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const date = new Date();
 const year = date.getFullYear();
@@ -135,18 +133,23 @@ const monthEl = document.querySelector('.footer__month');
 yearEl.textContent = year;
 monthEl.textContent = monthNames[month].substring(0, 3);
 
-const visualTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.section-visual',
-    start: 'center center',
-    end: '+=1200',
-    scrub: 0,
-    // markers: true,
-    onUpdate: function(self) {
-      const value = self.progress * 25;
+// cursor
+const cursor = document.querySelector('.cursor');
+const anchorEls = document.querySelectorAll('a');
+const CLASSNAME = 'is-hover';
 
-      visualTl.from('.section-visual__background img', {x: -value},'a');
-    }
-  }
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  
+  cursor.style.cssText = `left: ${x}px; top: ${y}px;`;
 });
-visualTl.to('.section-visual__background', {opacity: 0}, 'a');
+
+anchorEls.forEach(function(el) {
+  el.addEventListener('mousemove', () => {
+    cursor.classList.add(CLASSNAME);
+  })
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove(CLASSNAME);
+  })
+});
