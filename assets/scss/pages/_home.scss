@@ -338,6 +338,8 @@
   }
 
   &__experience {
+    padding-top: .5rem;
+
     @at-root .experience {
       &__item {
         &+& {
