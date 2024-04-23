@@ -472,7 +472,7 @@ body.is-loading {
     min-width: 50%;
   }
 }
-.section-visual__motto {
+.section-visual__body {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -484,7 +484,7 @@ body.is-loading {
   padding-bottom: 1.25rem;
 }
 @media (min-width: 700px) {
-  .section-visual__motto {
+  .section-visual__body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
