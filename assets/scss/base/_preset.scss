@@ -75,3 +75,40 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+// cursor
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index--cursor;
+  // mix-blend-mode: difference;
+  pointer-events: none;
+
+  .is-loading & {
+    display: none;
+  }
+
+  @media (hover: none) {
+    display: none;
+  }
+
+  &__pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    transition-property: width, height;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+
+    .is-hover & {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

@@ -161,6 +161,39 @@ body.is-loading {
   display: none;
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+.is-loading .cursor {
+  display: none;
+}
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
+.cursor__pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+  transition-property: width, height;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.is-hover .cursor__pointer {
+  width: 4rem;
+  height: 4rem;
+}
+
 @font-face {
   font-family: "Neue Montreal";
   src: url("../fonts/PPNeueMontreal-Variable.ttf") format("truetype");
@@ -790,38 +823,4 @@ body.is-loading {
 }
 .experience__link:hover .experience__ribbon span {
   background-color: #1c1c1c;
-}
-
-.cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  mix-blend-mode: difference;
-  pointer-events: none;
-}
-.is-loading .cursor {
-  display: none;
-}
-@media (hover: none) {
-  .cursor {
-    display: none;
-  }
-}
-.cursor__pointer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background-color: #fff;
-  transition-property: width, height;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-}
-.is-hover .cursor__pointer {
-  width: 4rem;
-  height: 4rem;
 }
