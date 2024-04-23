@@ -138,15 +138,15 @@ const cursor = document.querySelector('.cursor');
 const anchorEls = document.querySelectorAll('a');
 const CLASSNAME = 'is-hover';
 
-document.addEventListener('mousemove', (e) => {
+window.addEventListener('mousemove', (e) => {
   const x = e.clientX;
   const y = e.clientY;
   
-  cursor.style.cssText = `left: ${x}px; top: ${y}px;`;
+  cursor.style.cssText = `top: ${y}px; left: ${x}px;`;
 });
 
 anchorEls.forEach(function(el) {
-  el.addEventListener('mousemove', () => {
+  el.addEventListener('mouseenter', () => {
     cursor.classList.add(CLASSNAME);
   })
   el.addEventListener('mouseleave', () => {
