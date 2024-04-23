@@ -168,7 +168,7 @@ body.is-loading {
 }
 @font-face {
   font-family: "playground";
-  src: url("../fonts/PPPlayground-Medium.woff2") format("woff");
+  src: url("../fonts/PPPlayground-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Redhatdisplay Variablefont Wght";
@@ -517,6 +517,7 @@ body.is-loading {
 }
 .section-visual__description .korean {
   font-size: 0.8rem;
+  font-weight: 300;
 }
 .section-visual__arrow {
   font-size: 150%;
