@@ -170,6 +170,13 @@ body.is-loading {
   font-family: "playground";
   src: url("../fonts/PPPlayground-Medium.woff2") format("woff");
 }
+@font-face {
+  font-family: "Redhatdisplay Variablefont Wght";
+  src: url("../fonts/65407e39088c9fbcac98510e_RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
 .common-inner {
   max-width: 130rem;
   margin: 0 auto;
@@ -422,29 +429,32 @@ body.is-loading {
 }
 .section-visual__headline {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
   width: 100%;
   padding-bottom: 10vh;
-  font-family: playground, "Neue Montreal";
+  font-family: "Redhatdisplay Variablefont Wght";
   font-size: 15vw;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.05;
 }
 @media screen and (min-width: 700px) {
   .section-visual__headline {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
     -moz-column-gap: 0;
          column-gap: 0;
     padding-bottom: 0;
     margin-left: -1.25rem;
     font-size: 12vw;
+    line-height: 1.3;
   }
 }
 @media screen and (min-width: 1000px) {
   .section-visual__headline {
-    font-size: 12.5rem;
+    font-size: 10.5rem;
   }
 }
 .section-visual__headline span:not(.word) {
@@ -485,30 +495,17 @@ body.is-loading {
   display: flex;
   flex-direction: column;
   row-gap: 0.625rem;
-  min-width: 12.5rem;
-  padding: 0.625rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0.3125rem;
-}
-.section-visual__textbox:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.1);
 }
 @media screen and (min-width: 700px) {
   .section-visual__textbox {
     width: 33.3333333333%;
-    padding: 1.25rem;
   }
 }
 .section-visual__title {
-  font-family: playground, "Neue Montreal";
-  font-size: 9vw;
+  font-family: "Redhatdisplay Variablefont Wght";
+  font-size: 1.6rem;
+  font-weight: 400;
   line-height: 1;
-}
-@media screen and (min-width: 700px) {
-  .section-visual__title {
-    font-size: 3rem;
-  }
 }
 .section-visual__description {
   display: flex;
@@ -517,7 +514,6 @@ body.is-loading {
 }
 .section-visual__description .english {
   font-size: 1rem;
-  font-weight: 600;
 }
 .section-visual__description .korean {
   font-size: 0.8rem;
