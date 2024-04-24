@@ -22,9 +22,8 @@ button {
 }
 
 ::selection {
-  background-color: $color-white;
   color: $color-primary;
-  text-shadow: none;
+  background-color: $color-white;
 }
 
 html {
