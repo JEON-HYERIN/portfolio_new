@@ -19,7 +19,7 @@ if (history.scrollRestoration) {
   history.scrollRestoration = "manual";
 }
 
-const visualText = new SplitType('.section-visual__headline', {types: 'words', tagName: 'span'});
+const visualText = new SplitType('.section-visual__headline .word-wrapper', {types: 'words', tagName: 'span'});
 
 // loading
 const loadingTl = gsap.timeline({

@@ -489,7 +489,6 @@ body.is-loading {
   }
 }
 .section-visual__headline .word-wrapper {
-  white-space: nowrap;
   overflow: hidden;
 }
 @media screen and (min-width: 700px) {
