@@ -488,18 +488,18 @@ body.is-loading {
     font-size: 10.5rem;
   }
 }
-.section-visual__headline span:not(.word) {
+.section-visual__headline .word-wrapper {
   white-space: nowrap;
   overflow: hidden;
 }
 @media screen and (min-width: 700px) {
-  .section-visual__headline span:not(.word):nth-child(1) {
+  .section-visual__headline .word-wrapper:nth-child(1) {
     width: 66.6666666667%;
   }
-  .section-visual__headline span:not(.word):nth-child(2) {
+  .section-visual__headline .word-wrapper:nth-child(2) {
     width: 33.3333333333%;
   }
-  .section-visual__headline span:not(.word):nth-child(3) {
+  .section-visual__headline .word-wrapper:nth-child(3) {
     min-width: 50%;
   }
 }
