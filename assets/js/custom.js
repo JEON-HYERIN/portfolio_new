@@ -59,14 +59,14 @@ window.addEventListener('scroll', function() {
   }
 })
 
-// gnb
-const navEls = document.querySelectorAll('.global-nav__item');
+// nav
+const navLinks = document.querySelectorAll('.global-nav__link');
 
-navEls.forEach(function(navEl) {
-  const anchor = navEl.dataset.anchor;
+navLinks.forEach(function(navLink) {
+  const anchor = navLink.getAttribute('href');
   
-  navEl.addEventListener('click', () => {
-    lenis.scrollTo(`#${anchor}`);
+  navLink.addEventListener('click', () => {
+    lenis.scrollTo(anchor);
   });
 });
 
