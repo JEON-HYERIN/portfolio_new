@@ -482,7 +482,7 @@ body.is-loading {
   font-family: "Clashgrotesk", sans-serif;
   font-weight: 400;
   font-size: 15vw;
-  line-height: 1;
+  line-height: 1.1;
 }
 @media screen and (min-width: 700px) {
   .section-visual__headline {
@@ -498,8 +498,8 @@ body.is-loading {
   margin: 0;
 }
 .section-visual .text-move__word {
-  color: #cf0;
   height: auto !important;
+  color: #cf0;
 }
 .section-visual__body {
   flex: 1;

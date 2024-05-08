@@ -54,7 +54,7 @@
     font-family: 'Clashgrotesk', sans-serif;
     font-weight: 400;
     font-size: 15vw;
-    line-height: 1;
+    line-height: 1.1;
 
     @include not-mobile {
       font-size: 12vw;
@@ -69,8 +69,8 @@
     margin: 0;
 
     &__word {
-      color: #cf0;
       height: auto !important;
+      color: #cf0;
     }
   }
 
