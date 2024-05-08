@@ -438,7 +438,9 @@ body.is-loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1c1c1c;
+  background-image: url("../images/overlay.gif");
+  background-size: 250px;
+  opacity: 0.03;
 }
 
 .section-visual {

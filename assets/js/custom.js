@@ -35,13 +35,13 @@ const loadingTl = gsap.timeline({
 });
 loadingTl
 .to('.loading', {yPercent: -100, delay: .5, onUpdate: function() {document.body.classList.remove('is-loading');}}, 'a')
+.from('.section-visual__background img', {y: '12.5rem', opacity: 0}, 'a+=.6')
 .set('.loading', {display: 'none'}, 'b')
-.from('.section-visual__background img', {y: '12.5rem', opacity: 0}, 'b')
-.from('.section-visual__headline > span', {yPercent: 100, opacity: 0, stagger: .12}, 'b+=.4')
-.from('.header__logo a', {y: '3.75rem', opacity: 0}, 'b+=.5')
-.from('.section-visual__description', {y: '3.75rem', opacity: 0}, 'b+=.6')
-.from('.global-nav__link', {y: '3.75rem', opacity: 0, stagger: .1}, 'b+=.7')
-.from('.section-visual__scroll span', {y: '3.75rem', opacity: 0}, 'b+=.7')
+.from('.section-visual__headline > span', {yPercent: 100, opacity: 0, stagger: .12}, 'b')
+.from('.header__logo a', {y: '3.75rem', opacity: 0}, 'b+=.1')
+.from('.section-visual__description', {y: '3.75rem', opacity: 0}, 'b+=.2')
+.from('.global-nav__link', {y: '3.75rem', opacity: 0, stagger: .1}, 'b+=.3')
+.from('.section-visual__scroll span', {y: '3.75rem', opacity: 0}, 'b+=.3')
 
 // header
 window.addEventListener('scroll', function() {
