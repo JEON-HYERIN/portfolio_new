@@ -229,7 +229,7 @@
     align-items: center;
     column-gap: .5rem;
 
-    @include desktop {
+    @include not-mobile {
       align-self: flex-end;
     }
   }
