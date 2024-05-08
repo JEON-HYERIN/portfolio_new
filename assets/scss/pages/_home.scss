@@ -50,30 +50,25 @@
     flex-direction: column;
     column-gap: 20px;
     overflow: hidden;
+    margin-top: -2%;
     font-family: 'Clashgrotesk', sans-serif;
     font-weight: 400;
     font-size: 15vw;
     line-height: 1;
 
     @include not-mobile {
-      font-size: 13vw;
+      font-size: 12vw;
     }
 
     @include desktop {
-      font-size: 7.5rem;
+      font-size: 8rem;
     }
   }
 
-  .change-move {
+  .text-move {
     margin: 0;
-    overflow: hidden;
 
-    &__inner {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__text {
+    &__word {
       color: #cf0;
       height: auto !important;
     }
@@ -107,14 +102,9 @@
     }
 
     .korean {
-      max-width: 80%;
       font-size: .8rem;
       font-weight: 300;
       line-height: 1.6;
-
-      @include not-mobile {
-        max-width: none;
-      }
     }
   }
 

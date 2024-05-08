@@ -478,6 +478,7 @@ body.is-loading {
   -moz-column-gap: 20px;
        column-gap: 20px;
   overflow: hidden;
+  margin-top: -2%;
   font-family: "Clashgrotesk", sans-serif;
   font-weight: 400;
   font-size: 15vw;
@@ -485,23 +486,18 @@ body.is-loading {
 }
 @media screen and (min-width: 700px) {
   .section-visual__headline {
-    font-size: 13vw;
+    font-size: 12vw;
   }
 }
 @media screen and (min-width: 1000px) {
   .section-visual__headline {
-    font-size: 7.5rem;
+    font-size: 8rem;
   }
 }
-.section-visual .change-move {
+.section-visual .text-move {
   margin: 0;
-  overflow: hidden;
 }
-.section-visual .change-move__inner {
-  display: flex;
-  flex-direction: column;
-}
-.section-visual .change-move__text {
+.section-visual .text-move__word {
   color: #cf0;
   height: auto !important;
 }
@@ -533,15 +529,9 @@ body.is-loading {
   font-size: 1rem;
 }
 .section-visual__description .korean {
-  max-width: 80%;
   font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.6;
-}
-@media screen and (min-width: 700px) {
-  .section-visual__description .korean {
-    max-width: none;
-  }
 }
 .section-visual__arrow {
   font-size: 150%;

@@ -94,14 +94,14 @@ visualTl.to('.section-visual__background', {opacity: 0}, 'a');
 window.addEventListener('resize', changeMoveSetHeight);
 changeMoveSetHeight();
 function changeMoveSetHeight() {
-  const changeMoveTexts = document.querySelectorAll('.change-move__text');
-  const changeMoveHeight = changeMoveTexts[0].getBoundingClientRect().height;
-  const changeMoveEl = document.querySelector('.change-move');
+  const changeMoveTexts = document.querySelectorAll('.text-move__word');
+  const changeMoveHeight = Math.ceil(changeMoveTexts[0].getBoundingClientRect().height);
+  const changeMoveEl = document.querySelector('.text-move');
 
   changeMoveEl.style.height = changeMoveHeight + 'px';
 }
 
-const changeMoveSwiper = new Swiper('.change-move', {
+const changeMoveSwiper = new Swiper('.text-move', {
   direction: 'vertical',
   autoplay: true,
   loop: true,
