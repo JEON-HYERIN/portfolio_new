@@ -186,6 +186,7 @@
     row-gap: .625rem;
 
     @include not-mobile {
+      justify-content: flex-end;
       row-gap: 1.25rem;
     }
   }
@@ -202,7 +203,7 @@
     flex-direction: column-reverse;
     row-gap: .1rem;
 
-    @include desktop {
+    @include not-mobile {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -264,7 +265,6 @@
     position: relative;
     border-radius: .375rem;
     overflow: hidden;
-    background-color: $color-black;
     transform: translateZ(0);
     padding-top: 60%;
 

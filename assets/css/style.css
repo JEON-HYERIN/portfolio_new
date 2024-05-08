@@ -601,6 +601,7 @@ body.is-loading {
 }
 @media screen and (min-width: 700px) {
   .section-work__item {
+    justify-content: flex-end;
     row-gap: 1.25rem;
   }
 }
@@ -615,7 +616,7 @@ body.is-loading {
   flex-direction: column-reverse;
   row-gap: 0.1rem;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
   .section-work__textbox {
     flex-direction: row;
     justify-content: space-between;
@@ -676,7 +677,6 @@ body.is-loading {
   position: relative;
   border-radius: 0.375rem;
   overflow: hidden;
-  background-color: #000;
   transform: translateZ(0);
   padding-top: 60%;
 }
