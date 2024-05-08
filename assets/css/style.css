@@ -706,16 +706,14 @@ body.is-loading {
   justify-content: space-between;
   flex-direction: column;
   row-gap: 0.6rem;
-  padding: 1.3rem 1.3rem 1.3rem 3.5rem;
+  padding: 1.3rem;
   border-width: 1px 0;
   border-style: solid;
   border-color: #767676;
 }
 @media screen and (min-width: 700px) {
   .experience__link {
-    padding-top: 1.5625rem;
-    padding-bottom: 1.5625rem;
-    padding-right: 1.5625rem;
+    padding: 1.5625rem;
   }
 }
 .experience__link:hover {
@@ -748,34 +746,5 @@ body.is-loading {
   transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .experience__link:hover .experience__arrow {
-  transform: translate(0.3125rem);
-}
-.experience__ribbon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5.3125rem;
-  height: 5.3125rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #1c1c1c;
-  transform: rotate(-45deg);
-}
-.experience__ribbon span {
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 1.5625rem;
-  width: 18.75rem;
-  margin-left: -9.375rem;
-  background-color: #fff;
-}
-.experience__link:hover .experience__ribbon {
-  color: #fff;
-}
-.experience__link:hover .experience__ribbon span {
-  background-color: #1c1c1c;
+  transform: translate(0.4rem);
 }

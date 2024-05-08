@@ -310,15 +310,13 @@
         justify-content: space-between;
         flex-direction: column;
         row-gap: .6rem;
-        padding: 1.3rem 1.3rem 1.3rem 3.5rem;
+        padding: 1.3rem;
         border-width: 1px 0;
         border-style: solid;
         border-color: #767676;
 
         @include not-mobile {
-          padding-top: $gutter-mobile;
-          padding-bottom: $gutter-mobile;
-          padding-right: $gutter-mobile;
+          padding: $gutter-mobile;
         }
 
         &:hover {
@@ -355,40 +353,7 @@
         transition: transform .6s cubic-bezier(.075, .82, .165, 1);
 
         .experience__link:hover & {
-          transform: translate(.3125rem);
-        }
-      }
-
-      &__ribbon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5.3125rem;
-        height: 5.3125rem;
-        font-size: .75rem;
-        font-weight: 500;
-        color: $color-primary;
-        transform: rotate(-45deg);
-
-        span {
-          position: absolute;
-          top: .5rem;
-          left: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: $gutter-mobile;
-          width: 18.75rem;
-          margin-left: -9.375rem;
-          background-color: $color-white;
-        }
-
-        .experience__link:hover & {
-          color: $color-white;
-
-          span {
-            background-color: $color-primary;
-          }
+          transform: translate(.4rem);
         }
       }
     }
