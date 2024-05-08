@@ -706,14 +706,14 @@ body.is-loading {
   justify-content: space-between;
   flex-direction: column;
   row-gap: 0.6rem;
-  padding: 1.3rem;
+  padding: 1.3rem 1rem;
   border-width: 1px 0;
   border-style: solid;
   border-color: #767676;
 }
 @media screen and (min-width: 700px) {
   .experience__link {
-    padding: 1.5625rem;
+    padding: 1.5625rem 1.2rem;
   }
 }
 .experience__link:hover {

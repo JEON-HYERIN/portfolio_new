@@ -310,13 +310,13 @@
         justify-content: space-between;
         flex-direction: column;
         row-gap: .6rem;
-        padding: 1.3rem;
+        padding: 1.3rem 1rem;
         border-width: 1px 0;
         border-style: solid;
         border-color: #767676;
 
         @include not-mobile {
-          padding: $gutter-mobile;
+          padding: $gutter-mobile 1.2rem;
         }
 
         &:hover {
