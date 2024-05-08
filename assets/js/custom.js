@@ -114,19 +114,6 @@ const changeMoveSwiper = new Swiper('.text-move', {
 
 // matchMedia
 let mm = gsap.matchMedia();
-mm.add("(min-width: 700px)", () => {
-  gsap.from('.section-work__thumbnail *', {
-    yPercent: -3.5,
-    scale: 1.1,
-    scrollTrigger: {
-      trigger: '.section-work__list',
-      start: 'top bottom',
-      end: 'bottom center',
-      scrub: 0,
-      // markers: true
-    }
-  });
-});
 mm.add("(min-width: 1000px)", () => {
   gsap.from('.footer__inner', {
     yPercent: '-60',
