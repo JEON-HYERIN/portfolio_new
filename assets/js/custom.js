@@ -19,8 +19,6 @@ if (history.scrollRestoration) {
   history.scrollRestoration = "manual";
 }
 
-const visualText = new SplitType('.section-visual__headline .word-wrapper', {types: 'words', tagName: 'span'});
-
 // loading
 const loadingTl = gsap.timeline({
   // paused: true,
@@ -36,14 +34,14 @@ const loadingTl = gsap.timeline({
   }
 });
 loadingTl
-.to('.loading', {yPercent: -100, delay: .5, duration: .6, onUpdate: function() {document.body.classList.remove('is-loading');}}, 'a')
+.to('.loading', {yPercent: -100, delay: .5, onUpdate: function() {document.body.classList.remove('is-loading');}}, 'a')
 .set('.loading', {display: 'none'}, 'b')
 .from('.section-visual__background img', {y: '12.5rem', opacity: 0}, 'b')
-.from('.section-visual__headline .word', {yPercent: 150, opacity: 0, duration: .8, stagger: .12}, 'b')
-.from('.header__logo a', {y: '3.75rem', opacity: 0}, 'b+=.6')
-.from('.section-visual__textbox', {y: '3.75rem', opacity: 0}, 'b+=.7')
-.from('.global-nav__link', {y: '3.75rem', opacity: 0, stagger: .1}, 'b+=.8')
-.from('.section-visual__scroll span', {y: '3.75rem', opacity: 0}, 'b+=.8')
+.from('.section-visual__headline > span', {yPercent: 150, opacity: 0, stagger: .12}, 'b')
+.from('.header__logo a', {y: '3.75rem', opacity: 0}, 'b+=.5')
+.from('.section-visual__description', {y: '3.75rem', opacity: 0}, 'b+=.6')
+.from('.global-nav__link', {y: '3.75rem', opacity: 0, stagger: .1}, 'b+=.7')
+.from('.section-visual__scroll span', {y: '3.75rem', opacity: 0}, 'b+=.7')
 
 // header
 window.addEventListener('scroll', function() {
@@ -92,6 +90,27 @@ const visualTl = gsap.timeline({
   }
 });
 visualTl.to('.section-visual__background', {opacity: 0}, 'a');
+
+window.addEventListener('resize', changeMoveSetHeight);
+changeMoveSetHeight();
+function changeMoveSetHeight() {
+  const changeMoveTexts = document.querySelectorAll('.change-move__text');
+  const changeMoveHeight = changeMoveTexts[0].getBoundingClientRect().height;
+  const changeMoveEl = document.querySelector('.change-move');
+
+  changeMoveEl.style.height = changeMoveHeight + 'px';
+}
+
+const changeMoveSwiper = new Swiper('.change-move', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true,
+  speed: 500,
+  touchRatio: 0,
+  disableOnInteraction: false,
+  observeParents: true,
+  observer: true
+})
 
 // matchMedia
 let mm = gsap.matchMedia();

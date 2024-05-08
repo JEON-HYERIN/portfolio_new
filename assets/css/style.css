@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -209,6 +209,13 @@ body.is-loading {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Clashgrotesk";
+  src: url("../fonts/652543d0c2dced4668a2dffa_ClashGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 .common-inner {
   max-width: 130rem;
   margin: 0 auto;
@@ -263,6 +270,7 @@ body.is-loading {
 
 .korean {
   font-family: "Noto Sans KR", sans-serif;
+  word-break: keep-all;
 }
 
 .header {
@@ -436,13 +444,8 @@ body.is-loading {
 .section-visual {
   position: relative;
   height: 100vh;
-  min-height: 550px;
+  min-height: 580px;
   overflow: hidden;
-}
-@media (max-width: 700px) and (orientation: landscape) {
-  .section-visual {
-    min-height: 650px;
-  }
 }
 .section-visual .common-inner {
   position: absolute;
@@ -456,97 +459,89 @@ body.is-loading {
 .section-visual__content {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
+  padding-bottom: 1.25rem;
+}
+@media screen and (min-width: 700px) {
+  .section-visual__content {
+    padding-bottom: 3.125rem;
+  }
 }
 .section-visual__headline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
-  width: 100%;
-  padding-bottom: 10vh;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  overflow: hidden;
+  font-family: "Clashgrotesk", sans-serif;
+  font-weight: 400;
   font-size: 15vw;
-  font-weight: 500;
-  line-height: 1.05;
+  line-height: 1;
 }
 @media screen and (min-width: 700px) {
   .section-visual__headline {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    -moz-column-gap: 0;
-         column-gap: 0;
-    padding-bottom: 0;
-    margin-left: -1.25rem;
-    font-size: 12vw;
-    line-height: 1.25;
+    font-size: 13vw;
   }
 }
 @media screen and (min-width: 1000px) {
   .section-visual__headline {
-    font-size: 10.5rem;
+    font-size: 7.5rem;
   }
 }
-.section-visual__headline .word-wrapper {
+.section-visual .change-move {
+  margin: 0;
   overflow: hidden;
 }
-@media screen and (min-width: 700px) {
-  .section-visual__headline .word-wrapper:nth-child(1) {
-    width: 66.6666666667%;
-  }
-  .section-visual__headline .word-wrapper:nth-child(2) {
-    width: 33.3333333333%;
-  }
-  .section-visual__headline .word-wrapper:nth-child(3) {
-    min-width: 50%;
-  }
+.section-visual .change-move__inner {
+  display: flex;
+  flex-direction: column;
+}
+.section-visual .change-move__text {
+  color: #cf0;
+  height: auto !important;
 }
 .section-visual__body {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1.5rem;
-  width: 100%;
-  padding-bottom: 1.25rem;
 }
-@media (min-width: 700px) {
+@media screen and (min-width: 700px) {
   .section-visual__body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 3.125rem;
   }
-}
-.section-visual__textbox {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.625rem;
-}
-@media screen and (min-width: 700px) {
-  .section-visual__textbox {
-    width: 33.3333333333%;
-  }
-}
-.section-visual__title {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1;
 }
 .section-visual__description {
   display: flex;
   flex-direction: column;
   row-gap: 0.2rem;
 }
+@media screen and (min-width: 700px) {
+  .section-visual__description {
+    width: 33.3333333333%;
+  }
+}
 .section-visual__description .english {
   font-size: 1rem;
 }
 .section-visual__description .korean {
+  max-width: 80%;
   font-size: 0.8rem;
   font-weight: 300;
+  line-height: 1.6;
+}
+@media screen and (min-width: 700px) {
+  .section-visual__description .korean {
+    max-width: none;
+  }
 }
 .section-visual__arrow {
   font-size: 150%;

@@ -9,12 +9,20 @@
   src: url('../fonts/PPPlayground-Medium.woff2') format('woff2');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
 
 @font-face {
   font-family: 'Redhatdisplay Variablefont Wght';
   src: url('../fonts/65407e39088c9fbcac98510e_RedHatDisplay-VariableFont_wght.ttf') format('truetype');
   font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clashgrotesk';
+  src: url('../fonts/652543d0c2dced4668a2dffa_ClashGrotesk-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
