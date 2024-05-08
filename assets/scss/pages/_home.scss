@@ -199,8 +199,8 @@
 
   &__textbox {
     display: flex;
-    flex-direction: column;
-    row-gap: .5rem;
+    flex-direction: column-reverse;
+    row-gap: .1rem;
 
     @include desktop {
       flex-direction: row;

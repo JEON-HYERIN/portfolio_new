@@ -612,8 +612,8 @@ body.is-loading {
 }
 .section-work__textbox {
   display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
+  flex-direction: column-reverse;
+  row-gap: 0.1rem;
 }
 @media screen and (min-width: 1000px) {
   .section-work__textbox {
