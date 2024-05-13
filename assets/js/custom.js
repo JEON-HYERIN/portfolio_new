@@ -91,17 +91,17 @@ const visualTl = gsap.timeline({
 });
 visualTl.to('.section-visual__background', {opacity: 0}, 'a');
 
-window.addEventListener('resize', changeMoveSetHeight);
-changeMoveSetHeight();
-function changeMoveSetHeight() {
-  const changeMoveTexts = document.querySelectorAll('.text-move__word');
-  const changeMoveHeight = Math.ceil(changeMoveTexts[0].getBoundingClientRect().height);
-  const changeMoveEl = document.querySelector('.text-move');
+window.addEventListener('resize', textMoveSetHeight);
+textMoveSetHeight();
+function textMoveSetHeight() {
+  const textMoveWords = document.querySelectorAll('.text-move__word');
+  const textMoveHeight = Math.ceil(textMoveWords[0].getBoundingClientRect().height);
+  const textMoveEl = document.querySelector('.text-move');
 
-  changeMoveEl.style.height = changeMoveHeight + 'px';
+  textMoveEl.style.height = textMoveHeight + 'px';
 }
 
-const changeMoveSwiper = new Swiper('.text-move', {
+const textMoveSwiper = new Swiper('.text-move', {
   direction: 'vertical',
   autoplay: true,
   loop: true,
