@@ -173,8 +173,6 @@
     row-gap: 3.5rem;
 
     @include not-mobile {
-      // grid-template-columns: repeat(3, 1fr);
-      // gap: 8.5rem 1.25rem;
       grid-template-columns: repeat(2, 1fr);
       gap: 6rem 1.25rem;
     }
@@ -265,18 +263,7 @@
     position: relative;
     border-radius: .375rem;
     overflow: hidden;
-    transform: translateZ(0);
     padding-top: 60%;
-
-    // @include not-mobile {
-    //   $padding: 60%, 67%, 73%, 75%, 62%, 75%;
-
-    //   @for $i from 1 through 6 {
-    //     .section-work__item:nth-child(#{$i}) & {
-    //       padding-top: nth($padding, $i);
-    //     }
-    //   }
-    // }
 
     &:hover {
       opacity: .75;
