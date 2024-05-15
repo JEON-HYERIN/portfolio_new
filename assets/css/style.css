@@ -270,6 +270,7 @@ body.is-loading {
 
 .korean {
   font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
   word-break: keep-all;
 }
 
@@ -691,8 +692,9 @@ body.is-loading {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.section-work__experience {
-  padding-top: 0.5rem;
+.experience__remark {
+  padding: 0.5rem 0;
+  font-size: 0.7rem;
 }
 .experience__item + .experience__item {
   margin-top: -1px;

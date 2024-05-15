@@ -280,9 +280,12 @@
   }
 
   &__experience {
-    padding-top: .5rem;
-
     @at-root .experience {
+      &__remark {
+        padding: .5rem 0;
+        font-size: .7rem;
+      }
+
       &__item {
         &+& {
           margin-top: -1px;
